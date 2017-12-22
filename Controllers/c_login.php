@@ -1,8 +1,9 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/login.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/encrypt_decrypt.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/fetch_password.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/verify_login.php';
 
 // if all form variables are well defined
 if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_POST['pwd']!="") 

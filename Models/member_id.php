@@ -1,11 +1,6 @@
 <?php
-// set some variables to global to be available to use inside statements
-global $servername, $username, $password, $database;
-// set values for the variables (server connection parameters)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "app";
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
 
 // function to retrieve the id of a member from his email address (int return)
 function get_member_id($email)
@@ -15,11 +10,8 @@ function get_member_id($email)
 	
 	try
 	{
-		// try to connect to the database with the defined parameters
-		$pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-		// set the PDO error mode to exception
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo = connect_database();
+		if(!$pdo){ return false; }
 		// prepare the SQL request
 		$request = "SELECT Member_ID FROM members WHERE Mail = :email";
 		$stmt = $pdo->prepare($request);
@@ -47,6 +39,10 @@ function get_member_id($email)
 	{
 		// if an error occurs, display the error message
 		error_log("An error occured " . $e->getMessage());
+		return false;
+	}
+	if(isset($e))
+	{
 		return false;
 	}
 }

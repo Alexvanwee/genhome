@@ -48,6 +48,10 @@ function create_user($first_name,$last_name,$email,$pwd,$serial)
 		// if failure, return false
 		return false;
 	}
+	if(isset($e))
+	{
+		return false;
+	}
 }
 
 

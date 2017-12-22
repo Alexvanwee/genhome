@@ -1,30 +1,18 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
-
-// set some variables to global to be available to use inside statements
-global $servername, $username, $password, $database;
-// set values for the variables (server connection parameters)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "app";
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
 
 // function to create a new home
 function create_home($email, $address)
 {
-	// retrieve the variables set at the beginning of the page
-	global $servername, $username, $password, $database;
 	// retrieve the member id with his email address
     $member_id = get_member_id($email);
 
     try
 	{
-	    // try to connect to the database with the defined parameters
-	    $pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-		// set the PDO error mode to exception
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	   	$pdo = connect_database();
+		if(!$pdo){ return false; }
 		// prepare the SQL request
 		$request = "INSERT INTO home (Address,Member_ID) VALUES (:ad,:mid)";
 		$stmt = $pdo->prepare($request);
@@ -44,6 +32,10 @@ function create_home($email, $address)
 		// if an error occurs, display the error message
 		error_log("An error occured " . $e->getMessage());
 		// if failure, return false
+		return false;
+	}
+	if(isset($e))
+	{
 		return false;
 	}
 }

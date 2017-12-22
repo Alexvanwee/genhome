@@ -1,25 +1,14 @@
 <?php
 
-// set some variables to global to be available to use inside statements
-global $servername, $username, $password, $database;
-// set values for the variables (server connection parameters)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "app";
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 function check_sold($serial)
 {
-	// retrieve the variables set at the beginning of the page
-	global $servername, $username, $password, $database;
-	
 	try
 	{		
-		// try to connect to the database with the defined parameters
-		$pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-		// set the PDO error mode to exception
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo = connect_database();
+		if(!$pdo){ return false; }
+
 		// prepare the SQL request
 		$request = "SELECT Serial_ID FROM sold WHERE (Serial_ID = :ser AND isRegistered = :isr)";
 		$stmt = $pdo->prepare($request);
@@ -54,9 +43,12 @@ function check_sold($serial)
 		error_log("An error occurred " . $e->getMessage());
 		return false;
 	}
+	if(isset($e))
+	{
+		return false;
+	}
 	
 }
-
 
 
 ?>

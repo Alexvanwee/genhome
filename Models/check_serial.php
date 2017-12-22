@@ -1,26 +1,15 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
-// set some variables to global to be available to use inside statements
-global $servername, $username, $password, $database;
-// set values for the variables (server connection parameters)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "app";
 
 function check_serial($serial)
 {
-	// retrieve the variables set at the beginning of the page
-	global $servername, $username, $password, $database;
 	try
 	{		
-		// try to connect to the database with the defined parameters
-		$pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-		// set the PDO error mode to exception
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo = connect_database();
+		if(!$pdo){ return false; }
 		// prepare the SQL request
 		$request = "SELECT Product_ID FROM members WHERE Product_ID = :pro";
 		$stmt = $pdo->prepare($request);
