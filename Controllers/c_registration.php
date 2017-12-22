@@ -22,7 +22,7 @@ if(valid_email($_POST["email"]) && valid_password($_POST["pwd"],$_POST["pwd2"]) 
 
 	if($creation)
 	{
-		header('Location: index.php');
+		header('Location: index.php?s=success');
 	}
 	else
 	{

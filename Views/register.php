@@ -24,6 +24,9 @@
 	<div class="logo">
 		<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
 	</div>
+	<div class="website_name">
+		Genhome
+	</div>
 	<form title="Register" action="index.php?t=registration" id="idForm" method="post">
 		<div class="t2">
 			<h2 id="error"></h2>

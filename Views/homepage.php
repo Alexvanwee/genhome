@@ -14,8 +14,9 @@
 		    	var div = document.getElementById('error');
 				div.innerHTML += 'Login failed, please try again...';
 			}
-			var oldURL = document.referrer;
-			if(oldURL == "http://localhost:8080/Genhome/index.php?t=register")
+			else if (window.location.href.indexOf("php?s=") > 0) 
+			/*var oldURL = document.referrer;
+			if(oldURL == "http://localhost:8080/Genhome/index.php?t=registration")*/
 			{
 				var div = document.getElementById('error');
 				div.innerHTML += 'Registration complete, you can now log in...';
@@ -27,6 +28,9 @@
 <body class="container">
 	<div class="logo">
 		<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
+	</div>
+	<div class="website_name">
+		Genhome
 	</div>
 	<form action="index.php?t=login" method="post">
 		<div class="t2">

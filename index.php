@@ -38,5 +38,6 @@ else if(isset($_GET['e']))
 		include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/homepage.php';
 	}
 }
+
 	
 ?>
