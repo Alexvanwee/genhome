@@ -24,9 +24,7 @@
 	<div class="logo">
 		<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
 	</div>
-	<div class="website_name">
-		Genhome
-	</div>
+	<header class="genhome">Genhome</header>
 	<form title="Register" action="index.php?t=registration" id="idForm" method="post">
 		<div class="t2">
 			<h2 id="error"></h2>
@@ -66,6 +64,13 @@
 			<input type="submit" id="submit" value="Submit"/>
 		</div>
 	</form>
+	<div class="rights">
+		© 2017. All rights reserved.
+	</div>
+	<div class="info">
+		<a class="about" href="#">About us </a>✕
+		<a class="contact" href="#">Contact us</a>
+	</div>
 </body>
 
 </html>

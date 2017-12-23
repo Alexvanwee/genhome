@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type='text/javascript' src='/Genhome/Scripts/js_cookiechoices.js'></script>
 	</head>
 	<div id="cookieChoiceInfo" style="position: fixed; width: 100%; background-color: rgba(238, 238, 238, 0.9); margin: 0px; left: 0px; bottom: 0px; padding: 4px; z-index: 1000; text-align: center;">
 		<div style="padding-right: 50px;">
@@ -16,13 +17,13 @@
 	<!-- Gros lien = la croix pour fermer -->
 
 
-	<script type='text/javascript' src='/Genhome/Scripts/js_cookiechoices.js'></script>
+	<!-- <script type='text/javascript' src='/Genhome/Scripts/js_cookiechoices.js'></script> -->
 
 	<script type="text/javascript">
 		(function()
 		{
 			var cookieBar=function(){
-				cookieChoices.showCookieBar({linkHref:'https://joaoapps.com/more-info-cookies/',dismissText:'',position:'bottom',cookieText:'',linkText:'',language:'en'})
+				cookieChoices.showCookieBar({dismissText:'',position:'bottom',cookieText:'',linkText:'',language:'en'})
 			};
 			if(document.addEventListener)
 			{

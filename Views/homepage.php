@@ -26,30 +26,35 @@
 </head>
 
 <body class="container">
-	<div class="logo">
-		<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
-	</div>
-	<div class="website_name">
-		Genhome
-	</div>
-	<form action="index.php?t=login" method="post">
-		<div class="t2">
-			<h2 id="error"></h2>
+		<div class="logo">
+			<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
 		</div>
-		<div>
-			<label for="login">Login</label>
-			<input id="login" type="text" name="login" required>
-		</div><br/>
-		<div>
-			<label for="password">Password</label>
-			<input id="password" type="password" name="pwd" required>
-		</div><br/>
-		<div class="buttons">
-			<button class="register" type="button" formnovalidate="formnovalidate" onclick="location.href='/Genhome/index.php?t=register'">Register</button> 
-			<input type="submit" value="Submit"/>
-			<button class="forgot_password" title="Forgot Password ?" type="button"/>
+		<header class="genhome">Genhome</header>
+		<form action="index.php?t=login" method="post">
+			<div class="t2">
+				<h2 id="error"></h2>
+			</div>
+			<div>
+				<label for="login">Login</label>
+				<input id="login" type="text" name="login" required>
+			</div><br/>
+			<div>
+				<label for="password">Password</label>
+				<input id="password" type="password" name="pwd" required>
+			</div><br/>
+			<div class="buttons">
+				<button class="register" type="button" formnovalidate="formnovalidate" onclick="location.href='/Genhome/index.php?t=register'">Register</button> 
+				<input type="submit" value="Submit"/>
+				<button class="forgot_password" title="Forgot Password ?" type="button"/>
+			</div>
+		</form>
+		<div class="rights">
+			© 2017. All rights reserved.
 		</div>
-	</form>
+		<div class="info">
+			<a class="about" href="#">About us </a>✕
+			<a class="contact" href="#">Contact us</a>
+		</div>
 </body>
 
 </html>
