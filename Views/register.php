@@ -69,7 +69,7 @@
 	</div>
 	<div class="info">
 		<a class="about" href="#">About us </a>✕
-		<a class="contact" href="#">Contact us</a>
+		<a class="contact" href="index.php?t=contact">Contact us</a>
 	</div>
 </body>
 
