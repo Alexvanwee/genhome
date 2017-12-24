@@ -1,6 +1,20 @@
 $(function()
 {
-	$('#login')
+	$('#name')
+	    .data("oldValue",'')
+	    .bind('input propertychange', function() 
+	    {
+	        var newValue = $(this).val();
+	        
+	        if (!isValid(newValue))
+	        {
+	            $(this).shake(3,4,400);
+	            return $(this).val($(this).data('oldValue'));
+	        }
+	        return $(this).data('oldValue',newValue)
+	    });
+	    
+	$('#email')
 	    .data("oldValue",'')
 	    .bind('input propertychange', function() 
 	    {
@@ -16,6 +30,10 @@ $(function()
 });
 
 
+function isValid(str)
+{
+    return !/[~`!#$%\^&*=\\+\.µ£¤²°()[\]\\;,/@{}|\\":<>\?]/g.test(str);
+}
 function isValid2(str)
 {
     return !/[~`'!#$%\^&*+=\\µ£¤²°()[\]\\;,/{}|\\":<>\?]/g.test(str);

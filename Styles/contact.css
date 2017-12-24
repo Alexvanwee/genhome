@@ -1,0 +1,213 @@
+@font-face 
+{
+    font-family: Roboto;
+    src: url(/Genhome/fonts/Roboto/Roboto-Regular.woff);
+}
+@font-face 
+{
+    font-family: Roboto-Medium;
+    src: url(/Genhome/fonts/Roboto/Roboto-Medium.woff);
+}
+@font-face 
+{
+    font-family: Roboto-Light;
+    src: url(/Genhome/fonts/Roboto/Roboto-Light.woff);
+}
+html
+{
+  max-height: 100%;
+  min-width: 450px;
+}
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.logo
+{
+  display: flex;
+  grid-area: a;
+  min-height: 101px;
+  height:100%;
+  align-content: center !important;
+  align-self: center !important;
+  justify-self: left;
+  float: left;
+  min-width: 101px;
+}
+.thelogo
+{
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+body 
+{
+  font-family: Roboto-Light;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  color: #e64a19;
+  background: #424242;
+
+  display: grid;
+  grid-template-areas: 
+    "a b c"
+    "d d d"
+    "e f g";
+  grid-template-rows: 15% 83% 3%;
+  grid-template-columns: 15% 70% 15%;
+  margin: auto;
+  min-width: 402px;
+  align-content: center;
+  height: 100%;
+  min-height: 100%;
+}
+.rights
+{
+  grid-area: e;
+  color: #E64A19;
+  font-size: 13px;  
+  font-family: Roboto-Light;
+  width: fit-content;
+  height: fit-content;
+  justify-self: left;
+  align-self: center;
+  font-weight: normal;
+}
+.container 
+{
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-height: 100%;
+  grid-area: d;
+}
+
+#contact input[type="text"],#contact input[type="email"],
+#contact input[type="tel"],#contact input[type="url"],
+#contact textarea,#contact button[type="submit"] 
+{
+  font-size: 17px;
+  font-family: Roboto-Light;
+}
+
+#contact 
+{
+  background: #bdbdbd00;
+  border-radius: 8px;
+  border: none;
+  color: #e0e0e0;
+  margin: 0 auto;
+}
+.genhomeh3
+{
+  color: #E64A19;
+}
+#contact h3 
+{
+  display: block;
+  font-size: 35px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+#contact h4 
+{
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  height: 70px;
+  border-bottom: 1.2px solid #bdbdbd;
+  margin-bottom: 30px;
+}
+fieldset 
+{
+  margin-bottom: 4%;
+  border: none;
+  min-width: 100%;
+  width: 100%;
+}
+#contact textarea 
+{
+  margin-bottom: 20px !important;
+}
+#contact input[type="url"]
+{
+  margin-bottom: 15px !important;
+}
+#contact input[type="text"],#contact input[type="email"],
+#contact input[type="tel"],#contact input[type="url"]
+{
+  width: 100%;
+  border: none;
+  border-bottom: 1.1px solid #BDBDBD;
+  background: #FFFFFF00;
+}
+label
+{
+  font-size: 18px;
+  font-family: Roboto-Light; 
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2%;
+  color: #F4511E;
+}
+#contact textarea 
+{
+  width: 100%;
+  background: #FFFFFF00;
+  color: #e0e0e0;
+  height: 140px;
+  max-width: 100%;
+  resize: none;
+  border: 1.1px solid #BDBDBD;
+  padding: 10px;
+}
+
+#contact button[type="submit"] 
+{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #E64A1900;
+  color: #E64A19;
+  border: 1.5px solid #E64A19;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Roboto-Light;
+  font-weight: bold;
+  outline: none;
+}
+input
+{
+  color: #e0e0e0;
+  padding: 1px 0px 1px 0px;
+  height: 30px;
+}
+.back 
+{
+  text-align: center;
+  color: #e0e0e0;
+  font-family: Roboto-Light;
+  font-weight: bold;
+}
+#contact input:focus
+{
+  outline: 0;
+  border-bottom: 1.5px solid #E64A19;
+}
+#contact textarea:focus 
+{
+  outline: 0;
+  border: 1.5px solid #E64A19;
+}
+.index
+{
+  text-decoration: none !important;
+  color: #f4511e;
+}

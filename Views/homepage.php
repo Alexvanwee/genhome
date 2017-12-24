@@ -6,6 +6,7 @@
 	<title>Homepage</title>
 	<link rel="stylesheet" href="/Genhome/Styles/homepage.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/Genhome/Scripts/js_homepage.js"></script>
 	<script>
 		window.onload = function() 
 		{
@@ -53,7 +54,7 @@
 		</div>
 		<div class="info">
 			<a class="about" href="#">About us </a>✕
-			<a class="contact" href="#">Contact us</a>
+			<a class="contact" href="index.php?t=contact">Contact us</a>
 		</div>
 </body>
 
