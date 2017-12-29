@@ -5,7 +5,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 function verify_login($login)
 {
-	global $servername, $username, $password, $database;
 	try 
 	{
 		$pdo = connect_database();

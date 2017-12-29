@@ -15,11 +15,12 @@ function create_home($email, $address)
 	   	$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL request
-		$request = "INSERT INTO home (Address,Member_ID) VALUES (:ad,:mid)";
+		$request = "INSERT INTO home (Address,Member_ID,Home_name) VALUES (:ad,:mid,:ad2)";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (address and member_id)
 		$stmt->bindParam(":ad", $address,PDO::PARAM_STR);
 		$stmt->bindParam(":mid", $member_id,PDO::PARAM_INT);
+		$stmt->bindParam(":ad2", $address,PDO::PARAM_STR);
 		// execute the SQL command
 		$stmt->execute();
 		// close the connection to the database
