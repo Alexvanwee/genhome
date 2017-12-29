@@ -1,6 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 // function to create a new home
 function new_sold($serial)

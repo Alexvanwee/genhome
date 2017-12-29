@@ -15,7 +15,7 @@ else if($isOwner == 1 && $isAdmin == 0)
 {
 	//$_SESSION['isOwner'] = $isOwner;
 	// require owner view
-	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/dashboard_owner.php';
+	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/dashboard.php';
 }
 else if($isOwner == 0 && $isAdmin == 0)
 {

@@ -39,9 +39,6 @@
         <p class="back">Back to <a class="index" href="/Genhome/index.php">Genhome</a></p>
     </form>
   </div>
-  <div class="rights">
-      © 2017. All rights reserved.
-  </div>
 </body>
 
 </html>

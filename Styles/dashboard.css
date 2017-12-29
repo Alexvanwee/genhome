@@ -22,21 +22,21 @@
 html,body 
 {
     height: 100%;
-    background-color: #eee;
+    background-color: #424242;
     font-family: Roboto;
 }
 
 html,body,input,textarea,buttons 
 {
-    -webkit-font-smoothing: antialiased;
+    /*-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);*/
 }
 .thelogo
 {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
 }
 #header 
 {
@@ -46,7 +46,11 @@ html,body,input,textarea,buttons
     left: 0;
     z-index: 2;
     transition: left 0.2s;
+    text-align: center;
+    border-bottom: 1.1px solid #e64a19;
+    border-bottom-left-radius: 8px;
 }
+
 #sidedrawer 
 {
     position: fixed;
@@ -62,6 +66,25 @@ html,body,input,textarea,buttons
     font-weight: 100;
     font-family: Roboto-Light;
     font-size: 16px;
+    box-shadow: 1px 0px 2px 0px rgba(35, 35, 35, 0.75);
+}
+#sidedrawer::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: #25252500;
+}
+
+#sidedrawer::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #25252500;
+}
+
+#sidedrawer::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #e64a19;
 }
 #content-wrapper 
 {
@@ -141,14 +164,15 @@ html,body,input,textarea,buttons
 {
     color: #e9e4e4;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 20px;
     margin-right: 10px;
+    float: left;
 }
 .sidedrawer-toggle:hover 
 {
-    color: #fff;
     text-decoration: none;
+    outline: none;
 }
 /**
  * Sidedrawer CSS
@@ -156,13 +180,18 @@ html,body,input,textarea,buttons
 #sidedrawer-brand 
 {
     text-align: center;
-    background-color: #e64a19;
+    background-color: #424242;
     height: 95px;
     padding-top: 5px;
+    /*border: 1.1px solid #e64a19;
+    border-radius: 8px;*/
+    /*box-shadow: 0px 1.3px 2px 0px rgba(35, 35, 35, 0.75);*/
+
 }
 #sidedrawer ul 
 {
     list-style: none;
+    padding-left: 25px;
 }
 #sidedrawer > ul 
 {
@@ -180,7 +209,7 @@ html,body,input,textarea,buttons
 }
 #sidedrawer strong:hover 
 {
-    background-color: #E0E0E0;
+    background-color: #616161;
 }
 #sidedrawer strong + ul > li 
 {
@@ -191,7 +220,7 @@ html,body,input,textarea,buttons
  */
 #footer 
 {
-    background-color: #e64a19;
+    background-color: #42424200;
     color: #fff;
 }
 #footer a 
@@ -201,14 +230,106 @@ html,body,input,textarea,buttons
 }
 .mui-container-fluid
 {
-  padding-top: 10px;
-}
-.mui--appbar-height
-{
-  margin-bottom: -10px;
-}
-.mui-appbar
-{
-  background-color: #e64a19;
+    padding-top: 20px;
 }
 
+.mui-appbar
+{
+    background-color: #e64a1900;
+}
+#triangle, .triangle
+{
+    float: right;
+}
+.add
+{
+    float: right;
+    margin-right: 10px;
+}
+#sidedrawer a
+{
+    color: #e0e0e0;
+    display: block;
+    padding-right: 14px;
+}
+#sidedrawer a:hover
+{
+    text-decoration: none;
+}
+.website_name
+{
+    font-family: Roboto-Light;
+    font-size: 40px;
+    font-weight: 400;
+    color: #ececec;
+}
+.disconnect
+{
+    color: #f4511e !important;
+}
+.mui-divider
+{
+    height: 2px;
+}
+a
+{
+    text-decoration: none !important;
+    outline: none !important;
+}
+a:hover
+{
+    text-decoration: none !important;
+    outline: none !important;
+}
+a:active
+{
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+@media (min-width:480px)
+{
+    .mui--appbar-height
+    {
+        height:100px;
+    }
+    .mui--appbar-min-height,.mui-appbar
+    {
+        min-height:100px;
+    }
+    .mui--appbar-line-height
+    {
+        line-height:80px;
+    }
+    .mui--appbar-top
+    {
+        top:100px
+    }
+    #header
+    {
+        height: 100px;
+    }
+}
+@media (max-width:480px)
+{
+    .mui--appbar-height
+    {
+        height:76px;
+    }
+    .mui--appbar-min-height,.mui-appbar
+    {
+        min-height:76px;
+    }
+    .mui--appbar-line-height
+    {
+        line-height:56px;
+    }
+    .mui--appbar-top
+    {
+        top:76px;
+    }
+    #header
+    {
+        height: 76px;
+    }
+}

@@ -4,6 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/create_user.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/create_home.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/link_home_user.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/set_as_registered.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 
 // function to create a new user with a new home

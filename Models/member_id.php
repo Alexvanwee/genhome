@@ -1,6 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 // function to retrieve the id of a member from his email address (int return)
 function get_member_id($email)

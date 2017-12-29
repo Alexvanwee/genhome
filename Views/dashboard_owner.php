@@ -11,7 +11,7 @@ if (isset($_SESSION['login']))
 	echo '</head>';
 
 	echo '<body>';
-	echo 'You are a standard user.' ;
+	echo 'You are the user.' ;
 	echo '<br />';
 	// On affiche un lien pour fermer notre session
 	echo '<a href="/Genhome/Models/logout.php">Disconnect</a>';
