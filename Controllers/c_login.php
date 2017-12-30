@@ -30,7 +30,10 @@ if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_P
 		if (isset($pwd_valide) && !!($pwd_valide) && $pwd_valide == $_POST['pwd'] && isset($member_id)) 
 		{
 			// save the parameters of the visitor as session variables (login and password)
-			$_SESSION['login'] = $_POST['login'];			
+			$_SESSION['login'] = $_POST['login'];
+
+			$_SESSION['where']	= "favourites";
+			$_SESSION['type'] = "";		
 
 			$_SESSION['member_id'] = $member_id;
 			// redirect to the homepage

@@ -37,8 +37,10 @@
 	        </li>
 
 	        <li id="multiple">
-	          <strong>Houses<span class="triangle">◂</span></strong>
+	          <strong>Change House<span class="triangle">◂</span></strong>
 	          <ul>
+	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/homes.php'; ?>
+	          	<!-- SET WHERE -->
 	            <li>
 	            	<a href="#">New House<span class="add">+</span></a>
 	            </li>
@@ -86,6 +88,9 @@
     	<!-- ########################################################## -->
      	<!-- ###################### Page content ###################### -->
       
+     	<!-- ICI RECUPERER VARIABLES SESSIONS ET APPELER CONTROLEUR -->
+     	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_redirection.php';?>
+
       	<div >
         	<p>Texte ici</p>
         	

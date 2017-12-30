@@ -1,8 +1,10 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_rooms_names.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_primary_home.php';
 
-$rooms = get_rooms_names(13);
+$home_id = get_primary_home($_SESSION['login']);
+$rooms = get_rooms_names($home_id);
 $part1 = '<li><a href="#">';
 $part2 = '</a></li>';
 
