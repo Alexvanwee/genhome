@@ -32,7 +32,7 @@ function create_user($first_name,$last_name,$email,$pwd,$serial)
 	catch(PDOException $e)
 	{
 		// if an error occurs, display the error message
-		error_log("An error occured " . $e->getMessage());
+		echo("An error occured " . $e->getMessage());
 		// if failure, return false
 		return false;
 	}

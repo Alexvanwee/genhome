@@ -32,7 +32,7 @@ if(valid_email($_POST["email"]) && valid_password($_POST["pwd"],$_POST["pwd2"]) 
 // if email, password or serial is not valid
 else
 {
-	header('Location: index.php?e=register');
+	header('Location: index.php?e=register2');
 }
 
 

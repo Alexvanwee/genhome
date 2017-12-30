@@ -32,7 +32,7 @@ function create_home($email, $address)
 	catch(PDOException $e)
 	{
 		// if an error occurs, display the error message
-		error_log("An error occured " . $e->getMessage());
+		echo("An error occured " . $e->getMessage());
 		// if failure, return false
 		return false;
 	}

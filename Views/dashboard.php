@@ -29,6 +29,7 @@
 	        <li id="multiple2">
 	          <strong>Rooms<span class="triangle">◂</span></strong>
 	          <ul>
+	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/rooms.php'; ?>
 	            <li>
 	            	<a href="#">New Room<span class="add">+</span></a>
 	            </li>
@@ -87,6 +88,7 @@
       
       	<div >
         	<p>Texte ici</p>
+        	
       	</div>
 
     <!-- ######## end ########"-->

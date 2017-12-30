@@ -3,6 +3,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
+// function to get the names od the user's homes (return array[values])
 function get_homes_names($email)
 {
 	// retrieve the member id
