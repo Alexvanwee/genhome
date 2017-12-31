@@ -3,28 +3,29 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 
-function check_ownership($email)
+
+function check_first_connection($email)
 {
 	// retrieve the member id with his email address
     $member_id = get_member_id($email);
 
     try
 	{
-	    $pdo = connect_database();
+		$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL request
-		$request = "SELECT isOwner FROM members WHERE Member_ID=:mid";
+		$request = "SELECT FirstConnection FROM members WHERE Member_ID=:mid";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (address and member_id)
 		$stmt->bindParam(":mid", $member_id,PDO::PARAM_INT);
 		// execute the SQL command
 		$stmt->execute();
 		// read and store the response into a convenient variable
-		$isOwner = $stmt->fetchColumn();
+		$first_connection = $stmt->fetchColumn();
 		// close the connection to the database
 	    $pdo=null;
 
-	    if($isOwner)
+	    if($first_connection)
 	    {
 	    	return 1;
 	    }
@@ -47,8 +48,7 @@ function check_ownership($email)
 	}
 }
 
-// $owner = check_ownership("alexandrevanwesel@gmail.com");
-// print_r($owner);
-
+// $first = check_first_connection("alexandrevanwesel@gmail.com");
+// print_r($first);
 
 ?>

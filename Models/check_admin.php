@@ -1,11 +1,13 @@
 <?php
 
-
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 
-function check_admin()
+function check_admin($email)
 {
+	// retrieve the member id with his email address
+    $member_id = get_member_id($email);
+
     try
 	{
 		$pdo = connect_database();
@@ -14,7 +16,7 @@ function check_admin()
 		$request = "SELECT isAdmin FROM members WHERE Member_ID=:mid";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (address and member_id)
-		$stmt->bindParam(":mid", $_SESSION["member_id"],PDO::PARAM_INT);
+		$stmt->bindParam(":mid",$member_id,PDO::PARAM_INT);
 		// execute the SQL command
 		$stmt->execute();
 		// read and store the response into a convenient variable
@@ -45,5 +47,7 @@ function check_admin()
 	}
 }
 
+// $admin = check_admin("alexandre.vanwesel@gmail.com");
+// print_r($admin);
 
 ?>
