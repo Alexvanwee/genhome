@@ -6,7 +6,7 @@ global $targets, $paths;
 $targets = array(0=>"login",1=>"registration",2=>"register",3=>"dashboard",4=>"contact",5=>"logout");
 $paths = array("/Controllers/c_login.php","/Controllers/c_registration.php","/Views/register.php","/Views/dashboard.php","/Views/contact.php","/Controllers/c_logout.php");
 
-if(!isset($_GET['t']) && !isset($_GET['e']))
+if(!isset($_GET['t']) && !isset($_GET['e']) && !isset($_GET['w']) && !isset($_GET['h']))
 {
 	if(!isset($_SESSION["login"]))
 	{
@@ -37,6 +37,16 @@ else if(isset($_GET['e']))
 	{
 		include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/homepage.php';
 	}
+}
+else if(isset($_GET['w'])) 
+{
+	$_SESSION['where'] = $_GET['w'];
+	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_dashboard.php';
+}
+else if(isset($_GET['h'])) 
+{
+	$_SESSION['home_id'] = $_GET['h'];
+	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_dashboard.php';
 }
 
 	

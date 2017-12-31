@@ -89,11 +89,11 @@
      	<!-- ###################### Page content ###################### -->
       
      	<!-- ICI RECUPERER VARIABLES SESSIONS ET APPELER CONTROLEUR -->
-     	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_redirection.php';?>
+     	
 
       	<div >
         	<p>Texte ici</p>
-        	
+        	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_redirection.php';?>
       	</div>
 
     <!-- ######## end ########"-->
