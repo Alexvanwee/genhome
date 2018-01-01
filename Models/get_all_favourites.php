@@ -3,14 +3,14 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_rooms_favourites.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_sensors_favourites.php';
 
-// function to get the favourites rooms of a user's home (return array[values])
+// function to get the favourites rooms of a user's home (return array(array[values]))
 function get_all_favourites($home_id)
 {
 	try 
 	{
 		$rooms = get_rooms_favourites($home_id);
 		$sensors = get_sensors_favourites($home_id);
-		$all_favourites = array_merge($rooms,$sensors);
+		$all_favourites = array($rooms,$sensors[0],$sensors[1]);
 		//return result
 		return $all_favourites;
 	}
@@ -30,5 +30,6 @@ function get_all_favourites($home_id)
 
 // $fav = get_all_favourites(25);
 // print_r($fav);
+
 
 ?>

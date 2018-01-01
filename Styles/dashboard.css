@@ -49,6 +49,8 @@ html,body,input,textarea,buttons
     text-align: center;
     border-bottom: 1.1px solid #e64a19;
     border-bottom-left-radius: 8px;
+    background-color: #424242;
+    cursor: default;
 }
 
 #sidedrawer 

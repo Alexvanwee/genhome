@@ -23,7 +23,7 @@
 
       <ul>
       		<li>
-	          <strong><a class="favourites" href="#">Favourites</a></strong>
+	          <strong><a class="favourites" href="index.php?w=favourites">Favourites</a></strong>
 	        </li>
 
 	        <li id="multiple2">
@@ -92,8 +92,9 @@
      	
 
       	<div >
-        	<p>Texte ici</p>
+        	
         	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_redirection.php';?>
+        	<?php //include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/cards.php';?>
       	</div>
 
     <!-- ######## end ########"-->

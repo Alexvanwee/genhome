@@ -3,7 +3,7 @@
 session_start();
 
 global $targets, $paths;
-$targets = array(0=>"login",1=>"registration",2=>"register",3=>"dashboard",4=>"contact",5=>"logout");
+$targets = array("login","registration","register","dashboard","contact","logout");
 $paths = array("/Controllers/c_login.php","/Controllers/c_registration.php","/Views/register.php","/Views/dashboard.php","/Views/contact.php","/Controllers/c_logout.php");
 
 if(!isset($_GET['t']) && !isset($_GET['e']) && !isset($_GET['w']) && !isset($_GET['h']))
@@ -41,12 +41,12 @@ else if(isset($_GET['e']))
 else if(isset($_GET['w'])) 
 {
 	$_SESSION['where'] = $_GET['w'];
-	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_dashboard.php';
+	header('Location: index.php');
 }
 else if(isset($_GET['h'])) 
 {
 	$_SESSION['home_id'] = $_GET['h'];
-	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_dashboard.php';
+	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_change_home.php';
 }
 
 	
