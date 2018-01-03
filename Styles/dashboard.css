@@ -362,3 +362,8 @@ a:active
         height: 30px;
     }
 }
+
+#multiple, #multiple2
+{
+    background-color: #424242;
+}

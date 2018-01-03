@@ -53,8 +53,6 @@ jQuery(function($) {
 // For the little triangle on the sections of the side menu
 //############################################################
 
-counter_triangle = 0;
-
 $(function()
 {
     $('#multiple, #multiple2').click(function()
@@ -62,19 +60,18 @@ $(function()
         // alert($(this).attr('id'));
         var id = $(this).attr('id');
         var triangle = document.getElementById(id).getElementsByClassName("triangle")[0];
-        if(counter_triangle == 0)
+        var background = $(this).css("background-color");
+        if(background == "rgb(66, 66, 66)")
         {
             triangle.innerHTML = '▾';
-            counter_triangle = 1;
             $(this).css("background-color","#616161");
         }
         else
         {
             triangle.innerHTML = '◂';
-            counter_triangle = 0;
             $(this).css("background-color","#424242");
         }
 
     });
-    
 });
+
