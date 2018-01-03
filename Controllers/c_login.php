@@ -4,6 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/encrypt_decrypt.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/fetch_password.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/verify_login.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_primary_home.php';
 
 // if all form variables are well defined
 if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_POST['pwd']!="") 
@@ -33,7 +34,10 @@ if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_P
 			$_SESSION['login'] = $_POST['login'];
 
 			$_SESSION['where']	= "favourites";
-			$_SESSION['type'] = "";		
+			$_SESSION['type'] = "";
+
+			$primary_home = get_primary_home($_SESSION['login']);
+			$_SESSION['home_id'] = $primary_home;		
 
 			$_SESSION['member_id'] = $member_id;
 			// redirect to the homepage

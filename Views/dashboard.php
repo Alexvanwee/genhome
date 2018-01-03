@@ -77,6 +77,11 @@
 
           <span class="website_name">Genhome</span>
         </div>
+        <div class="location">
+        	<span class="where">
+        		<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/location.php'; ?>
+        	</span>
+        </div>
         <!-- <span class="website_name">Genhome</span> -->
       </div>
 

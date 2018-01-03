@@ -137,10 +137,21 @@ function create_view($what,$data,$where)
 
 	if($what == "sensors")
 	{
-		for ($i=0; $i<sizeof($data); $i++) 
+		global $home_id;
+
+		$sensors = $data[0];
+		$sensors_ids = $data[1];
+		$all_favourites = get_all_favourites($home_id);
+		$sensors_ids_favourites = $all_favourites[2];
+		for ($i=0; $i<sizeof($sensors); $i++) 
 		{ 
-			$output = new_card("sensor",$data[$i],$where);
-			$output = str_replace("%favourite%", "card_not_favourite", $output);
+			$replace = "card_not_favourite";
+			$output = new_card("sensor",$sensors[$i],$where);
+			if(in_array($sensors_ids[$i], $sensors_ids_favourites))
+			{
+				$replace = "card_favourite";
+			}
+			$output = str_replace("%favourite%", $replace, $output);
 			echo($output);
 		}
 	}

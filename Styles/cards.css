@@ -10,7 +10,7 @@
 	font-family: 'Helvetica', Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
-    background: hsl(0, 0%, 96%);
+    background-color: #424242;
 }
 
 .card_button
@@ -223,7 +223,7 @@
                 /*justify-content: space-between;*/
         -webkit-justify-content: center;
                 justify-content: center;
-        margin-top: -1em;
+        margin-top: -18px;
     }
 
     .card 
@@ -238,24 +238,32 @@
     }
 }
 
-@media screen and (max-width: 639px) 
+@media screen and (max-width: 639.9px) 
 {
-  
-  .main-area {padding: 0em;}
+  .main-area {padding: 2em;}
   .card {margin-bottom: 0em;}
   .cards
   {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: -18px;
   }	
+}
+
+@media screen and (max-width: 480px) 
+{
+    .cards
+  {
+    margin-top: -28px;
+  } 
 }
 
 @media screen and (min-width: 960px) 
 {
     .cards 
     {
-        margin-top: inherit;
+        margin-top: -18px;
     }
     
     .card 

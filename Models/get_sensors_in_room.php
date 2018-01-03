@@ -10,7 +10,7 @@ function get_sensors_in_room($room_name,$home_id)
 		$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL statement
-		$request="SELECT Type_of_sensor FROM sensors WHERE Home_ID=:hid AND Room_ID = (SELECT Room_ID FROM room WHERE Room_name = :rnm AND Home_ID = :hid2)";
+		$request="SELECT Type_of_sensor,Sensor_ID FROM sensors WHERE Home_ID=:hid AND Room_ID = (SELECT Room_ID FROM room WHERE Room_name = :rnm AND Home_ID = :hid2)";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (member_id)
 		$stmt->bindParam(":hid", $home_id,PDO::PARAM_INT);
@@ -19,9 +19,21 @@ function get_sensors_in_room($room_name,$home_id)
 		//execute
 		$stmt->execute();
 		//fetch
-		$sensors = $stmt->fetchAll(PDO::FETCH_COLUMN, 0);
+		$sensors = $stmt->fetchAll();
 		// close connection
 		$pdo=null;
+		$names = array();
+		$ids = array();
+		for ($i=0; $i < sizeof($sensors); $i++) 
+		{ 
+			$names[$i] = $sensors[$i][0];
+		}
+		for ($i=0; $i < sizeof($sensors); $i++) 
+		{ 
+			$ids[$i] = $sensors[$i][1];
+		}
+		$sensors = array($names,$ids);
+		
 		//return result
 		return $sensors;
 	}

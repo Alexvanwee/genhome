@@ -48,7 +48,6 @@ html,body,input,textarea,buttons
     transition: left 0.2s;
     text-align: center;
     border-bottom: 1.1px solid #e64a19;
-    border-bottom-left-radius: 8px;
     background-color: #424242;
     cursor: default;
 }
@@ -108,6 +107,13 @@ html,body,input,textarea,buttons
     height: 30px;
     margin-left: 0px;
     transition: margin-left 0.2s;
+}
+
+.where
+{
+    font-family: Roboto-Light;
+    color: #E0E0E0;
+    font-size: 16px;
 }
 
 @media (min-width: 768px) 
@@ -288,16 +294,28 @@ a:active
     text-decoration: none !important;
     outline: none !important;
 }
+.location
+{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1.1px solid #e64a19;
+}
+.where
+{
+    align-self: center;
+}
 
 @media (min-width:480px)
 {
     .mui--appbar-height
     {
-        height:100px;
+        height:140px;
     }
     .mui--appbar-min-height,.mui-appbar
     {
         min-height:100px;
+        max-height:100px;
     }
     .mui--appbar-line-height
     {
@@ -311,16 +329,21 @@ a:active
     {
         height: 100px;
     }
+    .location
+    {
+        height: 40px;
+    }
 }
 @media (max-width:480px)
 {
     .mui--appbar-height
     {
-        height:76px;
+        height:116px;
     }
     .mui--appbar-min-height,.mui-appbar
     {
         min-height:76px;
+        max-height:76px;
     }
     .mui--appbar-line-height
     {
@@ -333,5 +356,9 @@ a:active
     #header
     {
         height: 76px;
+    }
+    .location
+    {
+        height: 30px;
     }
 }
