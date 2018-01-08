@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/Genhome/Scripts/js_dashboard.js"></script>
     <link href="/Genhome/Styles/dashboard.css" rel="stylesheet" type="text/css" />
+    <title>Genhome - Dashboard</title>
   </head>
   
   <body>
