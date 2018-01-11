@@ -56,7 +56,7 @@
 	        </li>
 
 	        <li>
-	          <strong><a class="about" href="#">About us</a></strong>
+	          <strong><a href="index.php?t=about" class="about" href="#">About us</a></strong>
 	        </li>
 
 	        <li>
