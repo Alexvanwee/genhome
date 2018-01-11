@@ -44,6 +44,7 @@ $part2 = '</section>
 </html>';
 
 $display_card = '<article class="card">
+					<input type="hidden" sid=%sensor_id%/>
 					    <div class="thumbnail">
 					        <button class="%favourite%" ></button>
 					        <button class="card_button" ></button>
@@ -59,6 +60,7 @@ $display_card = '<article class="card">
 				</article>';
 
 $alert_card = '<article class="card">
+					<input type="hidden" sid=%sensor_id%/>
 				        <div class="thumbnail">
 				            <button class="%favourite%" ></button>
 				            <button class="card_button" ></button>
@@ -171,10 +173,12 @@ function create_view($what,$data,$where)
 		}
 		for ($j=0; $j<sizeof($sensors); $j++) 
 		{ 
-			$room_name = in_which_room_sensor($sensors_ids[$j]);
+			$sensor_id = $sensors_ids[$j];
+			$room_name = in_which_room_sensor($sensor_id);
 			// $where = $home_name." - ".$room_name;
 			$output = new_card("sensor",$sensors[$j],$room_name);
 			$output = str_replace("%favourite%", "card_favourite", $output);
+			$output = str_replace("%sensor_id%", $sensor_id, $output);
 			echo($output);
 		}
 	}

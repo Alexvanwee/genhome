@@ -31,7 +31,7 @@
 			<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
 		</div>
 		<header class="genhome">Genhome</header>
-		<form action="index.php?t=login" method="post">
+		<form action="index.php?t=login" method="post" id="idForm">
 			<div class="t2">
 				<h2 id="error"></h2>
 			</div>
