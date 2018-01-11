@@ -5,6 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_sensors_in_room.php'
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_primary_home.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_home_name.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/in_which_room_sensor.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_all_sensors.php';
 
 global $where, $home_id;
 

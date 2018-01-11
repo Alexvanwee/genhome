@@ -23,11 +23,11 @@
         </fieldset>
         <fieldset>
             <label for="phone">Phone Number (optional)</label>
-            <input id="phone" type="tel" tabindex="3" required>
+            <input id="phone" type="tel" tabindex="3" >
         </fieldset>
         <fieldset>
             <label for="website">Your Website (optional)</label>
-            <input id="website" type="url" tabindex="4" required>
+            <input id="website" type="url" tabindex="4" >
         </fieldset>
         <fieldset>
             <label for="message">Message</label>
