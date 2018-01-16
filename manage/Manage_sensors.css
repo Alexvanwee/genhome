@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/roboto/Roboto-Regular.woff);
+}
+
+/*html {
+  max-height: 75%;
+  max-width: 75%;
+}*/
+
+body{
+  background-color: rgb(51,61,63);
+  color: rgb(51,61,63);
+  height: 100%;
+  width: 100%;
+  }
+
+header{
+  background-color: rgb(244,81,30);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 20% 70% 75%;
+}
+
+#logo{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 70px;
+  width: 70px;
+}
+
+h2 {
+	color: rgb(51, 61, 63);
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: Roboto;
+	padding: 0;
+}
+
+#flag{ 
+  margin-right:10px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
+h1 {
+  color: rgb(244, 81, 30);
+  margin-top: 0px;
+  margin-left: 20px;
+  font-family: Roboto;
+  padding: 0;
+  text-align: center;
+  height: 100px;
+  font-size: 200%;
+  float: center;
+}
+/*GRID*/
+.grid {
+  height: 500px;
+  width:1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+  grid-row-gap: 20px;
+  grid-column-gap: 40px;
+}
+
+.box {
+  color: block;
+  /*border-style: solid;
+  border-color: blue;*/
+}
+
+/*BOUTONS*/
+#menu_accordeon { /* details boite*/
+  padding:1;
+  margin:1;
+  text-align: center;
+  width: 150px;
+}
+#menu_accordeon ul { /*menu deroulant*/
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+#menu_accordeon li { /*boite- ecriture et bordure*/
+   background-color:rgb(224, 224, 224); 
+   margin-bottom:2px;
+   border:solid 3px rgb(244, 81, 30);
+}
+#menu_accordeon li li { /*derouleur*/
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   background: white;
+   box-shadow: none;
+   border:none;
+   margin:0;
+}
+#menu_accordeon a {
+  display:block;
+  text-decoration: none;
+  color: black;
+  padding: 15px 0;
+  font-family: Roboto;
+  font-size:1.2em;
+}
+#menu_accordeon ul li a, #menu_accordeon li:hover li a {
+  font-size:1em;
+}
+#menu_accordeon li:hover { /*boite - ombre kitchen*/
+   background: rgb(66, 66, 66);
+}
+#menu_accordeon li li:hover { /*derouleur - ombre sensors*/
+   background: rgb(224, 224, 224);
+}
+#menu_accordeon li:hover li {
+  max-height: 15em;
+}
+
+.button {
+  float:right;
+}

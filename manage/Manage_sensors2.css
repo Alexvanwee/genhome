@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/roboto/Roboto-Regular.woff);
+}
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(fonts/roboto/Roboto-Medium.woff);
+}
+@font-face {
+  font-family: Roboto-Light;
+  src: url(fonts/roboto/Roboto-Light.woff);
+}
+
+html {
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Roboto;
+  background-color: #424242;
+}
+body
+{
+  /*height: 1000px !important;*/
+}
+
+.container {
+  font-family: Roboto-Light;
+  font-weight: bold;
+  font-size: 14px;
+  
+  color: #e64a19;
+  background: #424242;
+  display: grid !important;
+  grid-template-areas: 
+    "a b c"
+    "e e e"
+    "h h h";
+  grid-template-rows: 15% 82% 3%;
+  grid-template-columns: 1fr 5fr 1fr;
+  margin: 0 auto;
+  min-width: 402px;
+  max-width: 100%;
+  
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+ }
+
+.logo {
+  display: flex;
+  grid-area: a;
+  min-height: 101px;
+  height:100%;
+  align-content: center !important;
+  align-self: center !important;
+  justify-self: left;
+  float: left;
+  min-width: 101px;
+}
+
+.genhome {
+  grid-area: b;
+  text-align: center;
+  width:50%;
+}
+
+.manage {
+  grid-area: e; 
+}
+
+.buttons {
+  grid-area: h;
+  width: fit-content;
+}
+
+#logo{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 70px;
+  width: 70px;
+}
+
+h2 {
+	color: rgb(51, 61, 63);
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: Roboto;
+	padding: 0;
+}
+
+h1{
+  color: rgb(244, 81, 30);
+  margin-bottom: 30px;
+  height: fit-content !important;
+  font-family: Roboto;
+  padding: 0;
+  text-align: center;
+  height: 100px;
+  font-size: 30px;
+  grid-area: e;
+}
+
+/*Menu deroulant*/
+#menu-demo2{grid-area: e;}
+#menu-demo2, #menu-demo2 ul{
+
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#menu-demo2 li{
+display:inline-block;
+position:relative;
+}
+#menu-demo2 ul li{
+display:inherit;
+}
+#menu-demo2 ul{
+position:absolute;
+z-index: 1000;
+max-height:0;
+left: 0;
+right: 0;
+overflow:hidden;
+-moz-transition: .8s all .3s;
+-webkit-transition: .8s all .3s;
+transition: .8s all .3s;
+}
+#menu-demo2 li:hover ul{
+max-height:15em;
+}
+/* background des liens menus */
+/*#menu-demo2 li:first-child{
+background-color: black;
+background-image:-webkit-linear-gradient(top, #65537A 0%, #2A2333 100%);
+background-image:linear-gradient(to bottom, #65537A 0%, #2A2333 100%);
+}*/
+/*#menu-demo2 li:nth-child(2){
+background-color: black;
+background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+background-image:linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+}
+#menu-demo2 li:nth-child(3){
+background-color: black;
+background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
+background-image:linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
+}
+#menu-demo2 li:last-child{
+background-color: #CFFF6A;
+background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
+background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
+}
+*/
+/* background des liens sous menus */
+/*#menu-demo2 li:first-child li{
+background:black;
+}*/
+/*#menu-demo2 li:nth-child(2) li{
+background:black;
+}
+#menu-demo2 li:nth-child(3) li{
+background:#9F391A;
+}
+#menu-demo2 li:last-child li{
+background:#677F35;
+}*/
+/* background des liens menus et sous menus au survol */
+/*#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
+background:black;
+}
+#menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
+background:orange;
+}
+#menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
+background:white;
+}*/
+#menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
+background:none;
+}
+/* les a href */
+#menu-demo2 a{
+text-decoration:none;
+display:block;
+padding:8px 32px;
+color:white;
+font-family:roboto;
+}
+#menu-demo2 ul a{
+padding:8px 0;
+}
+#menu-demo2 li:hover li a{
+color:white;
+text-transform:inherit;
+}
+#menu-demo2 li:hover a, #menu-demo2 li li:hover a{
+color:black;
+}
