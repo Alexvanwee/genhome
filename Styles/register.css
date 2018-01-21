@@ -175,23 +175,6 @@ input:focus
 	border: none;
 	border-bottom: 1.5px solid #E64A19;
 	outline: none;
-}
-.register 
-{
-	background-color: #BDBDBD;
-	color: white;
-	padding: 0px;
-	border: none;
-	border-radius: 8px !important;
-	cursor: pointer;
-	width: 120px;
-	text-align: center;
-	float: left;
-	height: 30px;
-	font-size: 17px;
-	font-family: Roboto-Light;
-	outline: none;
-	min-height: 551px;
 } 
 input[type=submit], #submit 
 {

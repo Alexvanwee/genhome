@@ -25,40 +25,6 @@ html
 	font-smoothing: antialiased;
   	text-rendering: optimizeLegibility;
 }
-.info
-{
-	grid-area: f;
-	justify-self: center;
-	width: fit-content;
-	font-size: 17px;
-	color: #BDBDBD;
-	text-decoration: none;
-	align-self: center;
-	overflow: auto;
-}
-.about
-{
-	color: #E64A19 !important;
-	text-decoration: none !important;
-	text-decoration: none !important;
-
-}
-.contact
-{
-	color: #E64A19 !important;
-	text-decoration: none !important;
-}
-.rights
-{
-	grid-area: e;
-	color: #E64A19;
-	font-size: 13px;	
-	font-family: Roboto-Light;
-	width: fit-content;
-	justify-self: left;
-	align-self: center;
-	height: fit-content;
-}
 .genhome
 {
 	grid-area: b;
@@ -90,28 +56,15 @@ html
 	height: 100px;
 	align-self: center;
 }
-.t2
-{
-	display:block;
-}
-#error
-{
-	color: #E0E0E0;
-	text-align: left;
-	font-family: Roboto;
-	font-weight: normal;
-	font-size: 18px;
-	min-height: 20px;
-}
 .container
 {
 	display: grid;
 	grid-template-areas: 
 		"a b c"
 		"d d d"
-		"e f g";
+		"e e e";
 	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 15% 82% 3%;
+	grid-template-rows: 15% 78% 7%;
 	margin: auto;
 	min-width: 300px;
 	align-content: center;
@@ -122,7 +75,7 @@ html
 #idForm 
 {
 	display: inline-block;
-	grid-column: d;
+	grid-area: d;
 	align-self: center !important;
 	justify-self: center !important;
 	min-width: 300px;
@@ -138,8 +91,9 @@ html
 	margin-bottom: 4%;
 	color: #F4511E;
 }
-input
+#idForm input[type=text]
 {
+	font-family: Roboto-Light;
 	width: 100%;
 	height: 30px;
 	font-size: 17px;
@@ -148,58 +102,57 @@ input
     color: #E0E0E0;
     background-color: #424242;
 }
-input:focus
+#idForm input:focus
 {
 	border: none;
     border-bottom: 1.5px solid #E64A19;
     outline: none;
 }
-.register 
+#idForm input:read-only:focus
+{
+	border: none;
+    border-bottom: 1.1px solid #BDBDBD;
+    outline: none;
+}
+#idForm input:read-only:hover
+{
+	cursor: default !important;
+}
+input[type=submit] 
+{
+	background-color: #E64A1900;
+	color: #e64a19;
+	height: 35px;
+	width: 150px;
+	padding: 0px;
+	border: 1.5px solid #e64a19;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: Roboto-Light;
+	font-size: 17px;
+	outline: none;
+}
+.logout 
 {
 	background-color: #BDBDBD00;
   	color: #BDBDBD;
+  	height: 35px;
+	width: 150px;
   	padding: 0px;
   	border: 1.5px solid #BDBDBD;
   	border-radius: 8px !important;
   	cursor: pointer;
   	margin-right: 2%;
-  	width: 120px;
   	text-align: center;
-  	float: left;
-  	height: 30px;
   	font-size: 17px;
   	font-family: Roboto-Light;
   	outline: none;
 } 
-input[type=submit] 
-{
-	background-color: #E64A1900;
-	color: #e64a19;
-	padding: 0px;
-	border: 1.5px solid #e64a19;
-	border-radius: 8px;
-	cursor: pointer;
-	/*margin-right: 2%;*/
-	width: 120px;
-	font-family: Roboto-Light;
-}
 .buttons
 {
-	display: inline;
-}
-.forgot_password
-{
-	background: url('/Genhome/Images/login/help.svg');
-	height: 25px !important;
-	width: 25px !important;
-	outline: none;
-	border: none;
-	float: right;
-}
-.forgot_password:hover
-{
-	background: url('/Genhome/Images/login/help_orange.svg');
-	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
 }
 
 .loading 

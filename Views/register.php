@@ -58,7 +58,7 @@
 			<input id="password2" type="password" name="pwd2" minlength="6" maxlength="30" required>
 		</div>
 		<div class="back">
-			<button class="return" type="button" onclick="location.href='/Genhome/index.php'" formnovalidate="formnovalidate">Back</button>
+			<button class="return" type="button" onclick="location.href='index.php'" formnovalidate="formnovalidate">Back</button>
 		</div>
 		<div class="buttons">
 			<input type="submit" id="submit" value="Submit"/>

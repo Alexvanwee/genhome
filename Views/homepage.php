@@ -44,7 +44,7 @@
 				<input id="password" type="password" name="pwd" required>
 			</div><br/>
 			<div class="buttons">
-				<button class="register" type="button" formnovalidate="formnovalidate" onclick="location.href='/Genhome/index.php?t=register'">Register</button> 
+				<button class="register" type="button" formnovalidate="formnovalidate" onclick="location.href='index.php?t=register'">Register</button> 
 				<input type="submit" value="Submit"/>
 				<button class="forgot_password" title="Forgot Password ?" type="button"/>
 			</div>
