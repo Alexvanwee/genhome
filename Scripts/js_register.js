@@ -73,7 +73,7 @@ $(function()
 
 function isValid(str)
 {
-    return !/[~`!#$%\^&*=\\+\.µ£¤²°()[\]\\;,/@{}|\\":<>\?]/g.test(str);
+    return !/[~`!#$%\^&*=\\+\.µ£¤²-_°()[\]\\;,/@{}|\\":<>\?]/g.test(str);
 }
 function isValid2(str)
 {

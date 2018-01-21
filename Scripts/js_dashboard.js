@@ -75,3 +75,52 @@ $(function()
     });
 });
 
+//##############################################################
+// For the favourite toggle (star in top-right corner of cards)
+//##############################################################
+
+$(function()
+{
+    $('.card_favourite, .card_not_favourite').click(function()
+    {
+        var fav = $(this).attr('class');
+        fav = fav == "card_favourite" ? 1 : 0;
+        var home_name = $("#where_location").text();
+        var room_name = $(this).closest(".card").find("#room_name").text();
+        var what = $(this).closest(".card").attr("what");
+        if(what == "sensor")
+        {
+          var sensor_name = $(this).closest(".card").find("#sensor_name").text();
+          var sensor_id = $(this).closest(".card").find("#sid").attr("sid");
+        }
+        else
+        {
+          var sensor_name = "";
+          var sensor_id = "";
+        }
+
+        var this_element = $(this);
+                 
+        $.post("index.php?t=favourite",{isfavourite : fav, home_name : home_name, room_name : room_name, sensor_name : sensor_name, sensor_id : sensor_id, what : what}, function(result)
+          {
+            var token = 0;
+            if(result.includes("/"))
+            { 
+              result = result.split("/");
+              token = 1; 
+              result = parseInt(result[0]);
+            }
+            else{ result = parseInt(result); }
+            if(result == 0 || result == 1 && token == 0 || token == 1)
+            {
+              new_class = (result == 1 ? "card_favourite" : "card_not_favourite");
+              this_element.attr('class', new_class);
+              if(token == 1){ location.href = "index.php"; }
+              else{ this_element.style.webkitTransform = ''; } 
+            }
+          });
+        
+    });
+});
+
+

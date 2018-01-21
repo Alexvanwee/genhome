@@ -1,5 +1,29 @@
 $(function()
 {
+    $('#contactForm').submit(function(e)
+    {                 
+        $.post("index.php?t=message",$('#contactForm').serialize(), function(result)
+          {
+          	result = result.split("/");
+          	var msg = result[1];
+          	result = parseInt(result[0]);
+          	if(result == 0)
+          	{
+          		$('#error').replaceWith('<span id="error">'+msg+"</span>");
+          		$("#holder").css("border-bottom","1.2px solid #d32f2f");
+          	}
+          	else if(result == 1)
+          	{
+          		$('#fields').replaceWith("<h1>"+msg+"</h1><br/>")
+          	}
+          });
+          e.preventDefault();        
+    });
+});
+
+
+$(function()
+{
 	$('#name')
 	    .data("oldValue",'')
 	    .bind('input propertychange', function() 

@@ -3,8 +3,8 @@
 session_start();
 
 global $targets, $paths;
-$targets = array("login","registration","register","dashboard","contact","logout","about","goToAddUser");
-$paths = array("/Controllers/c_login.php","/Controllers/c_registration.php","/Views/register.php","/Views/dashboard.php","/Views/contact.php","/Controllers/c_logout.php","/Views/about.php","/Controllers/action.php?action=goToAddUser");
+$targets = array("login","registration","register","dashboard","contact","logout","about","goToAddUser","favourite","message");
+$paths = array("/Controllers/c_login.php","/Controllers/c_registration.php","/Views/register.php","/Views/dashboard.php","/Views/contact.php","/Controllers/c_logout.php","/Views/about.php","/Controllers/action.php?action=goToAddUser","/Controllers/c_favourite.php","/Controllers/c_contact_message.php");
 
 if(!isset($_GET['t']) && !isset($_GET['e']) && !isset($_GET['w']) && !isset($_GET['h']) && !isset($_GET['f']))
 {

@@ -43,10 +43,10 @@ $part2 = '</section>
 
 </html>';
 
-$display_card = '<article class="card">
-					<input type="hidden" sid=%sensor_id%/>
+$display_card = '<article class="card" what="sensor">
+					<input type="hidden" id="sid" sid=%sensor_id%/>
 					    <div class="thumbnail">
-					        <button class="%favourite%" ></button>
+					        <button class="%favourite%" id="favourite"></button>
 					        <button class="card_button" ></button>
 					        <div class="img_container">
 					        	<img class="card_img" src="/Genhome/Images/dashboard/%image%">
@@ -54,23 +54,23 @@ $display_card = '<article class="card">
 					        <span class="data">%value%<span class="units">%units%</span></span>
 					    </div>
 					    <div class="card-content">
-					        <h2>%name%</h2>
-					        <p>%where%</p>
+					        <h2 id="sensor_name">%name%</h2>
+					        <p id="room_name">%where%</p>
 					    </div>
 				</article>';
 
-$alert_card = '<article class="card">
-					<input type="hidden" sid=%sensor_id%/>
+$alert_card = '<article class="card" what="sensor">
+					<input type="hidden" id="sid" sid=%sensor_id%/>
 				        <div class="thumbnail">
-				            <button class="%favourite%" ></button>
+				            <button class="%favourite%" id="favourite"></button>
 				            <button class="card_button" ></button>
 				            <div class="img_container_no_data">
 				                <img class="card_img_no_data" src="/Genhome/Images/dashboard/%image%">
 				            </div>
 				        </div>
 				        <div class="card-content">
-				            <h2>%name%</h2>
-				            <p>%where%</p>
+				            <h2 id="sensor_name">%name%</h2>
+				            <p id="room_name">%where%</p>
 				        </div>
 				</article>';
 
@@ -155,6 +155,7 @@ function create_view($what,$data,$where)
 				$replace = "card_favourite";
 			}
 			$output = str_replace("%favourite%", $replace, $output);
+			$output = str_replace("%sensor_id%", $sensors_ids[$i], $output);
 			echo($output);
 		}
 	}

@@ -16,6 +16,7 @@ function connect_database()
 		$pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 		// set the PDO error mode to exception
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo->query("SET NAMES UTF8");
 		return $pdo;
 	}
 	catch(PDOException $e)

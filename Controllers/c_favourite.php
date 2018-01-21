@@ -1,39 +1,35 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_rooms_favourites.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/switch_favourite.php';
 
-
-$what = $_SESSION["type"];
-$fav_id = $_SESSION["fav_id"];
-$home_id = $_SESSION["home_id"];;
-unset($_SESSION['type']);
-unset($_SESSION['fav_id']);
-
-if($what == "room")
+$email = $_SESSION["login"];
+$isfavourite = intval($_POST["isfavourite"]);
+$home_name = process_string($_POST["home_name"]);
+$room_name = process_string($_POST["room_name"]);
+$sensor_name = process_string($_POST["sensor_name"]);
+$sensor_id = intval(rtrim($_POST["sensor_id"],"/"));
+$what = $_POST["what"];
+// debug
+// echo("isFavourite : ".$isfavourite." / home : ".$home_name." / room : ".$room_name." / sensor : ".$sensor_name." / id : ".$sensor_id);
+if($what != "sensor" && $what != "room"){ echo 2; }
+else if($isfavourite != 0 && $isfavourite != 1){ echo 2; }
+else
 {
-	$rooms_favourites = get_rooms_favourites($home_id);
-	$in_array = in_array($fav_id, $rooms_favourites);
-	if($in_array)
-	{
-
-	}
-	else
-	{
-
-	}
+	$switch = switch_favourite($email,$home_name,$room_name,$sensor_name,$sensor_id,$isfavourite,$what);
+	$where = $_SESSION["where"];
+	if($where == "favourites"){ $switch = $switch."/3"; }
+	echo($switch);
 }
-else if(^$what == "sensor")
-{
-	$sensors_favourites = get_sensors_favourites($home_id);
-	$in_array = in_array($fav_id, $sensors_favourites);
-	if($in_array)
-	{
 
-	}
-	else
-	{
-		
-	}
+
+
+function process_string($str)
+{
+	$str = explode(" -", $str);
+	$str = $str[0];
+	$str = ltrim($str);
+	$str = rtrim($str);
+	return $str;
 }
 
 ?>

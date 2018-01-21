@@ -89,15 +89,15 @@ body
   grid-area: d;
 }
 
-#contact input[type="text"],#contact input[type="email"],
-#contact input[type="tel"],#contact input[type="url"],
-#contact textarea,#contact button[type="submit"] 
+#contactForm input[type="text"],#contactForm input[type="email"],
+#contactForm input[type="tel"],#contactForm input[type="url"],
+#contactForm textarea,#contactForm button[type="submit"] 
 {
   font-size: 17px;
   font-family: Roboto-Light;
 }
 
-#contact 
+#contactForm 
 {
   background: #bdbdbd00;
   border-radius: 8px;
@@ -109,21 +109,31 @@ body
 {
   color: #E64A19;
 }
-#contact h3 
+#contactForm h3 
 {
   display: block;
   font-size: 35px;
   font-weight: 300;
   margin-bottom: 15px;
 }
-#contact h4 
+#contactForm h4 
 {
   display: block;
   font-size: 16px;
   font-weight: 400;
-  height: 70px;
+  /*height: 70px;
+  border-bottom: 1.2px solid #bdbdbd;
+  margin-bottom: 30px;*/
+}
+#holder
+{
+  height: 40px;
   border-bottom: 1.2px solid #bdbdbd;
   margin-bottom: 30px;
+}
+#error
+{
+  color: #d32f2f;
 }
 fieldset 
 {
@@ -132,16 +142,16 @@ fieldset
   min-width: 100%;
   width: 100%;
 }
-#contact textarea 
+#contactForm textarea 
 {
   margin-bottom: 20px !important;
 }
-#contact input[type="url"]
+#contactForm input[type="url"]
 {
   margin-bottom: 15px !important;
 }
-#contact input[type="text"],#contact input[type="email"],
-#contact input[type="tel"],#contact input[type="url"]
+#contactForm input[type="text"],#contactForm input[type="email"],
+#contactForm input[type="tel"],#contactForm input[type="url"]
 {
   width: 100%;
   border: none;
@@ -157,7 +167,7 @@ label
   margin-bottom: 2%;
   color: #F4511E;
 }
-#contact textarea 
+#contactForm textarea 
 {
   width: 100%;
   background: #FFFFFF00;
@@ -169,7 +179,7 @@ label
   padding: 10px;
 }
 
-#contact button[type="submit"] 
+#contactForm button[type="submit"] 
 {
   width: 100%;
   margin-bottom: 10px;
@@ -196,15 +206,28 @@ input
   font-family: Roboto-Light;
   font-weight: bold;
 }
-#contact input:focus
+#contactForm input:focus
 {
   outline: 0;
   border-bottom: 1.5px solid #E64A19;
 }
-#contact textarea:focus 
+#contactForm input:read-only:focus
+{
+  outline: 0;
+  border-bottom: 1.1px solid #BDBDBD;
+}
+#contactForm input:read-only:hover
+{
+  cursor: default;
+}
+#contactForm textarea:focus 
 {
   outline: 0;
   border: 1.5px solid #E64A19;
+}
+h1
+{
+  text-align: center;
 }
 .index
 {
