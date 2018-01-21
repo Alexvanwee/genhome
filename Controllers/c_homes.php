@@ -2,6 +2,10 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_homes_names.php';
 
+if(!isset($_SESSION['login']))
+{
+	header('Location: ../index.php?t=logout');
+}
 global $homes;
 $homes = get_homes_names($_SESSION["login"]);
 if(!!$homes)

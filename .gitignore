@@ -1,3 +1,5 @@
 pull.bat
 
 /Models/connect_database.php
+
+session_variables.txt

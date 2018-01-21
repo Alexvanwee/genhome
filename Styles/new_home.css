@@ -1,0 +1,189 @@
+@font-face 
+{
+    font-family: Lato;
+    src: url(/Genhome/fonts/lato/Lato-Regular.ttf);
+}
+html
+{
+    background-color: #424242 !important;
+}
+.homes_container
+{
+	color: #E0E0E0;
+	font-family: Roboto-Light;
+	font-size: 18px;
+	/*line-height: 1.5;*/
+    background-color: #424242;
+    margin: 10px;
+    margin-top: 30px;
+}
+.home_title
+{
+    font-size: 18px;
+}
+.new_home
+{
+    display: block;
+    border-radius: 8px; 
+    border: 1.2px solid #e64a19;
+    padding: 5px;
+    margin-bottom: 10px;
+    height: fit-content !important;
+}
+.homes
+{
+    display: block;
+    border-radius: 8px; 
+    border: 1.1px solid #e64a19;
+}
+input
+{
+    width: 30%;
+    height: 30px;
+    font-size: 16px !important;
+    /*border: none;*/
+    border: 1.1px solid #BDBDBD;
+    border-radius: 8px;
+    color: #E0E0E0;
+    background-color: #424242;
+    font-family: Roboto-Light !important;
+    /*margin-bottom: 4%;*/
+    padding-left: 4px;
+}
+input:focus
+{
+    /*border: none;*/
+    border: 1.5px solid #E64A19;
+    outline: none;
+} 
+input[type=submit], #submit 
+{
+    background-color: #E64A1900;
+    color: #E64A19;
+    padding: 0px;
+    border: 1.5px solid #E64A19;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 15%;
+    font-family: Roboto-Light;
+    margin: auto;
+}
+#homeForm
+{
+    /*height: fit-content !important;*/
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 890px) 
+{
+    .new_home
+    {
+        text-align: center;
+    }
+   input
+   { 
+        /*display: block;*/
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 46%;
+   }
+   .home_title
+   {
+        display: block;
+   }
+   #submit
+   {
+        margin-top: 10px;
+   }
+   #homeForm
+   {
+        justify-content: center;
+   }
+   #address
+   {
+        margin-top: 15px;
+   }
+   input[type=submit], #submit 
+   {
+        width: 20%;
+   }
+}
+@media screen and (max-width: 540px) 
+{
+   input
+   {
+        display: block; 
+        width: 80%;
+   }
+   input[type=submit], #submit 
+   {
+        width: 25%;
+   }
+}
+
+/*###########################################*/
+/*###########################################*/
+
+.homes_elements
+{
+    margin: 10px;
+    text-align: center;
+    align-content: center;
+
+}
+.homes_table
+{
+    font-family: Roboto-Light !important;
+    color: #E0E0E0;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95%;
+    border-collapse: collapse;
+    border: 1px solid #BDBDBD;
+}
+th
+{
+    font-weight: normal;
+    height: 50px;
+}
+td
+{
+    text-align: center;
+    height: 40px;
+    border-right: 1.1px solid #BDBDBD;
+}
+#head_table
+{
+    border-bottom: 1.1px solid #BDBDBD;
+    color: #e64a19;
+}
+#delete_table
+{
+    width: 60px;
+}
+#delete
+{
+    width: 60px !important;
+}
+.delete_button
+{
+    background: url('/Genhome/Images/delete.png');
+    height: 25px !important;
+    width: 25px !important;
+    background-size: 100% 100%;
+    outline: none;
+    border: none;
+    /*float: right;*/
+}
+.delete_button:hover
+{
+    cursor: pointer;
+}
+.table_title
+{
+    font-size: 25px;
+}

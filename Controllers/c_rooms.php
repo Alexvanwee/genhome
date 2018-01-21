@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_primary_home.php';
 
 if(!isset($_SESSION['home_id']))
 {
-	header('Location: index.php?t=logout');
+	header('Location: ../index.php?t=logout');
 }
 $home_id = $_SESSION['home_id'];
 $rooms = get_rooms_names($home_id);

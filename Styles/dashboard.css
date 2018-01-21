@@ -189,7 +189,7 @@ html,body,input,textarea,buttons
 {
     text-align: center;
     background-color: #424242;
-    height: 95px;
+    height: 94px;
     padding-top: 5px;
     /*border: 1.1px solid #e64a19;
     border-radius: 8px;*/
@@ -304,6 +304,7 @@ a:active
 .where
 {
     align-self: center;
+    margin-left: 30px;
 }
 
 @media (min-width:480px)
@@ -366,4 +367,24 @@ a:active
 #multiple, #multiple2
 {
     background-color: #424242;
+}
+
+.first_name
+{
+    /*justify-self: center;*/
+    margin: 0 auto !important;
+    align-self: center !important;
+    font-size: 28px !important;
+}
+.name
+{
+    display: grid !important;
+    height: 37px !important;
+    justify-content: center !important;
+    align-content: center !important;
+    font-size: 21px !important;
+    color: #e0e0e0 !important;
+    border-bottom: 1.1px solid #e64a19;
+    border-top: 1.1px solid #e64a19;
+    font-family: Roboto;
 }

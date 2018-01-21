@@ -13,8 +13,8 @@
   </head>
 
   <?php
-    include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_location.php'; 
-    global $first_name; 
+    // include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_location.php'; 
+    // global $first_name; 
   ?>
   
   <body>
@@ -27,7 +27,7 @@
       </div>
       <div class="mui-divider"></div>
       <div class="name">
-        <span id="first_name"> <?php print_first_name(); ?> </span>
+        <span id="first_name"> <?php //print_first_name(); ?> </span>
       </div>
       <div class="mui-divider"></div>
       <ul>
@@ -38,7 +38,7 @@
 	        <li id="multiple2">
 	          <strong>Rooms<span class="triangle">◂</span></strong>
 	          <ul>
-	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_rooms.php'; ?>
+	          	<?php //include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_rooms.php'; ?>
 	            <li>
 	            	<a href="#">New Room<span class="add">+</span></a>
 	            </li>
@@ -48,7 +48,7 @@
 	        <li id="multiple">
 	          <strong>Change House<span class="triangle">◂</span></strong>
 	          <ul>
-	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_homes.php'; ?>
+	          	<?php //include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_homes.php'; ?>
 	          	<!-- SET WHERE -->
 	            <li>
 	            	<a href="#">New House<span class="add">+</span></a>
@@ -88,7 +88,7 @@
         </div>
         <div class="location">
         	<span class="where" id="where_location">
-        		<?php print_location(); ?>
+        		<?php //print_location(); ?>
         	</span>
         </div>
         <!-- <span class="website_name">Genhome</span> -->
@@ -107,11 +107,11 @@
 
       	<div >
         	
-        	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_redirection.php';?>
+        	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_home.php';?>
       	</div>
 
     <!-- ######## end ########"-->
     </div>
-    
+
   </body>
 </html>
