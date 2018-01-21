@@ -45,21 +45,21 @@ else if(isset($_GET['w']))
 }
 else if(isset($_GET['h'])) 
 {
-	$_SESSION['home_id'] = $_GET['h'];
+	$_SESSION['home_name'] = $_GET['h'];
 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_change_home.php';
 }
-else if(isset($_GET['fr']))
-{
-	$_SESSION['fav_id'] = $_GET['fr'];
-	$_SESSION['type'] = "room";
-	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_favourite.php';
-}
-else if(isset($_GET['fs']))
-{
-	$_SESSION['fav_id'] = $_GET['fs'];
-	$_SESSION['type'] = "sensor";
- 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_favourite.php';
-}
+// else if(isset($_GET['fr']))
+// {
+// 	$_SESSION['fav_id'] = $_GET['fr'];
+// 	$_SESSION['type'] = "room";
+// 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_favourite.php';
+// }
+// else if(isset($_GET['fs']))
+// {
+// 	$_SESSION['fav_id'] = $_GET['fs'];
+// 	$_SESSION['type'] = "sensor";
+//  	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_favourite.php';
+// }
 
 	
 ?>

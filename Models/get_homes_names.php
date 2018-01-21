@@ -3,7 +3,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
-// function to get the names od the user's homes (return array[values])
+// function to get the names of the user's homes (return array[values])
 function get_homes_names($email)
 {
 	// retrieve the member id
@@ -14,7 +14,7 @@ function get_homes_names($email)
 		$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL statement
-		$request="SELECT (Home_name) FROM home WHERE Member_ID=:mid";
+		$request="SELECT Home_name FROM home WHERE Member_ID=:mid";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (member_id)
 		$stmt->bindParam(":mid", $member_id,PDO::PARAM_INT);

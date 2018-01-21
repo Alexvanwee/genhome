@@ -56,6 +56,36 @@ html
 	height: 100px;
 	align-self: center;
 }
+.subheader
+{
+	margin-top: 50px;
+	margin-bottom: -50px;
+	grid-area: d;
+	justify-content: center;
+	height: fit-content;
+}
+.img_container
+{
+	display: flex;
+	justify-content: center;
+}
+.msg_container
+{
+	display: flex;
+	justify-content: center;
+}
+.message
+{
+	color: #BDBDBD;
+	font-family: Roboto-Light;
+	font-size: 28px;
+}
+.room_img
+{
+	width: 100px;
+	height: 100px;
+	/*align-self: center;*/
+}
 .container
 {
 	display: grid;
@@ -74,6 +104,7 @@ html
 }
 #idForm 
 {
+	margin-top: 50px;
 	display: inline-block;
 	grid-area: d;
 	align-self: center !important;

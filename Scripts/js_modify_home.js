@@ -1,18 +1,18 @@
-$(function()
-{
-	$('#login')
-	    .data("oldValue",'')
-	    .bind('input propertychange', function() 
-	    {
-	        var newValue = $(this).val();
+// $(function()
+// {
+// 	$('#login')
+// 	    .data("oldValue",'')
+// 	    .bind('input propertychange', function() 
+// 	    {
+// 	        var newValue = $(this).val();
 	        
-	        if (!isValid2(newValue))
-	        {
-	            $(this).shake(3,4,400);
-	            return $(this).val($(this).data('oldValue'));
-	        }
-	        return $(this).data('oldValue',newValue)
-	    });
+// 	        if (!isValid2(newValue))
+// 	        {
+// 	            $(this).shake(3,4,400);
+// 	            return $(this).val($(this).data('oldValue'));
+// 	        }
+// 	        return $(this).data('oldValue',newValue)
+// 	    });
 
 	//  $("#idForm").on("submit",function(e) 
 	// {

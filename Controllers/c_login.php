@@ -25,11 +25,11 @@ if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_P
 		// define an empty variable to further store the password retrieed from the DB
 		$pwd_valide = "";
 		$pwd_valide = fetch_password($_POST['login']);
-		$pwd_valide = encrypt_decrypt("decrypt", $pwd_valide);
+		$pwd_input = encrypt_decrypt("encrypt", $_POST['pwd']);
 		$member_id = get_member_id($_POST['login']);
 
 		// compare the password entered with the stored password
-		if (isset($pwd_valide) && !!($pwd_valide) && $pwd_valide == $_POST['pwd'] && isset($member_id)) 
+		if (isset($pwd_valide) && !!($pwd_valide) && $pwd_valide == $pwd_input && isset($member_id)) 
 		{
 			// save the parameters of the visitor as session variables (login and password)
 			$_SESSION['login'] = $_POST['login'];
