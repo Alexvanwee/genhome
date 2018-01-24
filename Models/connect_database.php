@@ -5,7 +5,7 @@ global $servername, $username, $password, $database;
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "app";
+$database = "genhome";
 
 function connect_database()
 {

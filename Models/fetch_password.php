@@ -1,6 +1,5 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_sold.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 function fetch_password($login)

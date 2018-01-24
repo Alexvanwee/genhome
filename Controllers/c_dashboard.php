@@ -3,6 +3,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_ownership.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_admin.php';
 
+
 $isOwner = check_ownership($_SESSION["login"]);
 $isAdmin = check_admin($_SESSION["login"]);
 

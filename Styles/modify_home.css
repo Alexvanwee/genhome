@@ -38,6 +38,10 @@ html
 	align-self: end; 
 	min-height: 101px; 
 }
+.genhome:hover
+{
+	cursor: default;
+}
 .logo
 {
 	display: flex;
@@ -60,9 +64,10 @@ html
 {
 	margin-top: 50px;
 	margin-bottom: -50px;
-	grid-area: d;
+	/*grid-area: d;*/
 	justify-content: center;
 	height: fit-content;
+	width: 100% !important;
 }
 .img_container
 {
@@ -73,12 +78,39 @@ html
 {
 	display: flex;
 	justify-content: center;
+	width: 100%;
 }
 .message
 {
 	color: #BDBDBD;
 	font-family: Roboto-Light;
 	font-size: 28px;
+}
+.message:hover
+{
+	cursor: default;
+}
+.englobe
+{
+	display: flex;
+	flex-wrap: wrap;
+	grid-area: d;
+	justify-content: center;
+	align-content: flex-start;
+}
+.error
+{
+	display: flex;
+	height: 24px;
+	justify-content: center;
+	margin-bottom: 25px;
+	font-weight: bold;
+	color: #d32f2f;
+}
+#error
+{
+	font-family: Roboto-Light;
+	font-size: 18px;
 }
 .room_img
 {
@@ -91,10 +123,9 @@ html
 	display: grid;
 	grid-template-areas: 
 		"a b c"
-		"d d d"
-		"e e e";
+		"d d d";
 	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 15% 78% 7%;
+	grid-template-rows: 15% 85%;
 	margin: auto;
 	min-width: 300px;
 	align-content: center;
@@ -102,11 +133,18 @@ html
 	min-height: 100%;
 	grid-template-rows: ['a'] fit-content(0%);
 }
+.formdiv
+{
+	display: flex;
+	width: 100%;
+	height: fit-content;
+	justify-content: center;
+}
 #idForm 
 {
 	margin-top: 50px;
 	display: inline-block;
-	grid-area: d;
+	/*grid-area: d;*/
 	align-self: center !important;
 	justify-self: center !important;
 	min-width: 300px;

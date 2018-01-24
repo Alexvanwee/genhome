@@ -6,6 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/fetch_password.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/verify_login.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_primary_home.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_all_sensors.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_first_connection.php';
 
 // if all form variables are well defined
 if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_POST['pwd']!="") 
@@ -35,7 +36,12 @@ if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_P
 			$_SESSION['login'] = $_POST['login'];
 			// set where (favourites) 
 			$_SESSION['where']	= "favourites";
-			// $_SESSION['type'] = "";
+			//check if first connection
+			$isFirst = check_first_connection($_SESSION['login']);
+			if($isFirst)
+			{
+				$_SESSION['where']	= "first_connection";
+			}
 			// set primary home id 
 			$primary_home = get_primary_home($_SESSION['login']);
 			$_SESSION['home_id'] = $primary_home;		

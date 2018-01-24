@@ -1,53 +1,35 @@
-// $(function()
-// {
-// 	$('#login')
-// 	    .data("oldValue",'')
-// 	    .bind('input propertychange', function() 
-// 	    {
-// 	        var newValue = $(this).val();
+$(function()
+{
+	$('#home_name')
+	    .data("oldValue",'')
+	    .bind('input propertychange', function() 
+	    {
+	        var newValue = $(this).val();
 	        
-// 	        if (!isValid2(newValue))
-// 	        {
-// 	            $(this).shake(3,4,400);
-// 	            return $(this).val($(this).data('oldValue'));
-// 	        }
-// 	        return $(this).data('oldValue',newValue)
-// 	    });
+	        if (!isValid(newValue))
+	        {
+	            $(this).shake(3,4,400);
+	            return $(this).val($(this).data('oldValue'));
+	        }
+	        return $(this).data('oldValue',newValue)
+	    });
 
-	//  $("#idForm").on("submit",function(e) 
-	// {
-	//     e.preventDefault();
-	//     // the script where the form input is processed
-	//     var url = "/Genhome/Controllers/c_registration.php";
-
-	//     $.ajax(
-	//     {
-	//        type: "POST",
-	//        url: url,
-	//        data: $("#idForm").serialize(), // serializes the form's elements.
-	//        beforeSend: function()
-	//        {
-	//             var load = '<div class="loading" id="loading">\
-	//                 <div class="loading-bar"></div>\
-	//                 <div class="loading-bar"></div>\
-	//                 <div class="loading-bar"></div>\
-	//                 <div class="loading-bar"></div>\
-	//             </div>';
-	//             var original = $("#idForm").replaceWith(load);
-	//        }
-	//     })
-	//     .done(function(data)
-	//     {
-	//         window.location.assign("/Genhome/index.php");
-	//     });
-	//     // e.preventDefault();
-	// });
+	 $("#idForm").on("submit",function(e) 
+	{
+	    $.post("index.php?t=message",$('#idForm').serialize(), function(result)
+          {
+          	result = parseInt(result);
+          	if(result == 0)
+          	{
+          		$("#error").text("An error occured, please try again later...");
+          	}
+          });
+	});
 });
 
-
-function isValid2(str)
+function isValid(str)
 {
-    return !/[~`'!#$%\^&*+=\\µ£¤²°()[\]\\;,/{}|\\":<>\?]/g.test(str);
+    return !/[~`!#$%\^&*=\\+\.µ£¤²-_°()[\]\\;,/@{}|\\":<>\?]/g.test(str);
 }
 
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) 

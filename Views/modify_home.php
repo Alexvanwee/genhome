@@ -19,14 +19,19 @@
 			<img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
 		</div>
 		<header class="genhome">Genhome</header>
+		<div class="englobe">
 		<div class="subheader">
 			<div class="img_container">
 				<img src="/Genhome/Images/room.png" class="room_img"/>
 			</div>
 			<div class="msg_container">
-				<h1 class="message">Add a name for your home</h1>
+				<h1 class="message">Add a name for your home</h1>				
+			</div>
+			<div class="error">
+				<span id="error"></span>
 			</div>
 		</div> 
+		<div class="formdiv">
 		<form action="" method="post" id="idForm">
 			<div>
 				<label for="address">Address</label>
@@ -41,6 +46,8 @@
 				<input type="submit" value="Next"/>
 			</div>
 		</form>
+		</div>
+		</div>
 
 </body>
 

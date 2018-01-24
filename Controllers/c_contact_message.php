@@ -17,7 +17,6 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['msg']) && 1=
 		$name = get_user_name($email);
 		$name = $name[0]." ".$name[1];
 	}
-	if(isset($_POST['url'])){ $url = $_POST['url']; }
 	
 	//####################
 	// do the email stuff 

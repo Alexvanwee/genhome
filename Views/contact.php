@@ -28,10 +28,6 @@
                 <input id="email" type="email" name="email" <?php echo($input_email) ?> >
             </fieldset>
             <fieldset>
-                <label for="website">Your Website (optional)</label>
-                <input id="website" type="url" name="url" >
-            </fieldset>
-            <fieldset>
                 <label for="message">Message</label>
                 <textarea id="message" placeholder="Type your message here...." name="msg" required></textarea>
             </fieldset>
