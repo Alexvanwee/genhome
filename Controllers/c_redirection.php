@@ -6,11 +6,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_primary_home.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_home_name.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/in_which_room_sensor.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_all_sensors.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_ownership.php';
 
-global $where, $home_id;
+global $where, $home_id, $isOwner;
 
 $home_id = "";
 $where = "";
+$isOwner = check_ownership($_SESSION["login"]);
 
 //#############################################
 // FOR GENERATION OF SENSORS IN DASHBOARD
@@ -87,8 +89,13 @@ check_session_home_id();
 
 if(isset($_SESSION['where']))
 {
-	global $where;
+	global $where, $isOwner;
 	$where = $_SESSION['where'];
+	if($where == "first_connection")
+	{
+		header('Location: index.php');
+	}
+
 	if($where == "favourites")
 	{
 		global $home_id;
@@ -96,6 +103,24 @@ if(isset($_SESSION['where']))
 		$all_favourites = get_all_favourites($home_id);
 		// GENERATE THE VIEW
 		create_view("favourites",$all_favourites,$home_id); //##################### HERE ########################
+	}
+	else if($where == "new_home")
+	{
+		if(!$isOwner)
+		{
+			$_SESSION["where"] = "favourites";
+			header('Location: index.php');
+		}
+		include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_home.php';
+	}
+	else if($where == "new_room")
+	{
+		if(!$isOwner)
+		{
+			$_SESSION["where"] = "favourites";
+			header('Location: index.php');
+		}
+		include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_room.php';
 	}
 	// If goes to a room
 	else

@@ -2,13 +2,22 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_referrer_id.php';
 
 // function to get the ids of the user's homes (return array[values])
 function get_homes_ids($email)
 {
 	// retrieve the member id
 	$member_id = get_member_id($email);
-
+	$referrer_id = get_referrer_id($member_id);
+    if(!$member_id || !$referrer_id)
+    {
+    	return false;
+    }
+    if($referrer_id > 0)
+    {
+    	$member_id = $referrer_id;
+    }
 	try 
 	{
 		$pdo = connect_database();

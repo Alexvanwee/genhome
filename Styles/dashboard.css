@@ -300,6 +300,8 @@ a:active
     display: flex;
     justify-content: center;
     border-bottom: 1.1px solid #e64a19;
+    border-top: 1.1px solid #e64a19;
+    background-color: #424242 !important;
 }
 .where
 {
@@ -379,7 +381,7 @@ a:active
 .name
 {
     display: grid !important;
-    height: 37px !important;
+    height: 38px !important;
     justify-content: center !important;
     align-content: center !important;
     font-size: 21px !important;

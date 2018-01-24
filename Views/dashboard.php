@@ -40,7 +40,7 @@
 	          <ul>
 	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_rooms.php'; ?>
 	            <li>
-	            	<a href="#">New Room<span class="add">+</span></a>
+	            	<a href="index.php?w=new_room">New Room<span class="add">+</span></a>
 	            </li>
 	          </ul>
 	        </li>
@@ -51,7 +51,7 @@
 	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_homes.php'; ?>
 	          	<!-- SET WHERE -->
 	            <li>
-	            	<a href="#">New House<span class="add">+</span></a>
+	            	<a href="index.php?w=new_home">New House<span class="add">+</span></a>
 	            </li>
 	          </ul>
 	        </li>
@@ -76,24 +76,22 @@
     <!-- ############## Header ############## -->
     <!-- ##################################### -->
     <header id="header">
+        <div class="mui-appbar mui--appbar-line-height">
+          
+            <div class="mui-container-fluid">
 
-      <div class="mui-appbar mui--appbar-line-height">
-        
-        <div class="mui-container-fluid">
+                <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+                <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
 
-          <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
-          <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
-
-          <span class="website_name">Genhome</span>
+                <span class="website_name">Genhome</span>
+            </div>
+            <div class="location">
+            	   <span class="where" id="where_location">
+            		<?php print_location(); ?>
+            	</span>
+            </div>
+          <!-- <span class="website_name">Genhome</span> -->
         </div>
-        <div class="location">
-        	<span class="where" id="where_location">
-        		<?php print_location(); ?>
-        	</span>
-        </div>
-        <!-- <span class="website_name">Genhome</span> -->
-      </div>
-
     </header>
     <!-- main -->
     <div id="content-wrapper">

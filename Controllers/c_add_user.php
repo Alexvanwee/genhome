@@ -27,7 +27,8 @@ elseif(!valid_email($email))
 $status = ($status == "User" ? 0 : 1);
 $member_id = 16;
 $user_password = random_password();
-$new_user = insertUser($name,$lastname,$email,$user_password,$status,$member_id);
+$crypted_password = encrypt_decrypt("encrypt",$user_password);
+$new_user = insertUser($name,$lastname,$email,$crypted_password,$status,$member_id);
 //$new_user = insertUser("pierre","mecchia","mecchia.pierre@gmail.com","aaa",0,15);
 if($new_user)
 {

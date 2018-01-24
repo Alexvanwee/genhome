@@ -7,7 +7,7 @@ html
 {
     background-color: #424242 !important;
 }
-.homes_container
+.rooms_container
 {
 	  color: #E0E0E0;
 	  font-family: Roboto-Light;
@@ -17,7 +17,7 @@ html
     margin: 10px;
     margin-top: 30px;
 }
-.home_title
+.room_title
 {
     font-size: 18px;
 }
@@ -28,7 +28,7 @@ html
     margin-bottom: 10px;
     color: #d32f2f;
 }
-.new_home
+.new_room
 {
     display: block;
     border-radius: 8px; 
@@ -37,7 +37,7 @@ html
     margin-bottom: 10px;
     height: fit-content !important;
 }
-.homes
+.rooms
 {
     display: block;
     border-radius: 8px; 
@@ -93,7 +93,7 @@ input[type=submit], #submit
     font-family: Roboto-Light;
     margin: auto;
 }
-#homeForm
+#roomForm
 {
     /*height: fit-content !important;*/
     padding: 10px;
@@ -104,7 +104,7 @@ input[type=submit], #submit
 
 @media screen and (max-width: 890px) 
 {
-    .new_home
+    .new_room
     {
         text-align: center;
     }
@@ -115,7 +115,7 @@ input[type=submit], #submit
         margin-top: 10px;
         width: 46%;
    }
-   .home_title
+   .room_title
    {
         display: block;
    }
@@ -123,7 +123,7 @@ input[type=submit], #submit
    {
         margin-top: 10px;
    }
-   #homeForm
+   #roomForm
    {
         justify-content: center;
    }
@@ -152,14 +152,14 @@ input[type=submit], #submit
 /*###########################################*/
 /*###########################################*/
 
-.homes_elements
+.rooms_elements
 {
     margin: 10px;
     text-align: center;
     align-content: center;
 
 }
-.homes_table
+.rooms_table
 {
     font-family: Roboto-Light !important;
     color: #E0E0E0;
@@ -196,7 +196,7 @@ td
 }
 .delete_button
 {
-    background: url('/Genhome/Images/delete.png');
+    background: url('/Genroom/Images/delete.png');
     height: 25px !important;
     width: 25px !important;
     background-size: 100% 100%;

@@ -27,6 +27,7 @@ function print_location()
 	$home_name = get_home_name($home_id);
 	$where = $_SESSION['where'];
 	$where = ucfirst($where);
+	$where = str_replace("_", " ", $where);
 	echo($home_name." - ".$where);
 }
 
