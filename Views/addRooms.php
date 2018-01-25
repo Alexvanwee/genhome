@@ -47,8 +47,8 @@
 		© 2017. All rights reserved.
 	</div>
 	<div class="info">
-		<a class="about" href="index.php?t=about">About us </a>✕
-		<a class="contact" href="index.php?t=contact">Contact us</a>
+		<a class="about" href="about.php">About us </a>✕
+		<a class="contact" href="contact.php">Contact us</a>
 	</div>
 </body>
 

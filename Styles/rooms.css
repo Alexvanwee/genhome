@@ -77,7 +77,6 @@ html{
 }
 
 .manage{
-  border: 1.5px solid #e64a19
   grid-area: d;
   font-size: 80px;
   font-family: Roboto-Light;

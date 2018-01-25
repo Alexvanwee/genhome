@@ -8,6 +8,11 @@
     <title>My Rooms</title>
     <link rel="stylesheet" type="text/css" href="/Genhome/Styles/rooms.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <?php 
+        include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_user_name.php';
+        $user_name = get_user_name($_SESSION["login"]);
+        $user_name = $user_name[0];
+    ?>
 </head>
   
 
@@ -26,6 +31,9 @@
   		<div class="buttons">
             <button class="plus" type="button" formnovalidate="formnovalidate" onclick="location.href='addRooms.php'"><img src="/Genhome/Images/plus.png" alt="add" /></button> 
         </div>
+        <p id="member">
+            <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_show_rooms.php';?>
+          </p>
  	</div>
     
     <input type="submit" value="Submit"/>
@@ -35,8 +43,8 @@
     </div>
   	
     <div class="info">
-        <a class="about" href="index.php?t=about">About us </a>✕
-        <a class="contact" href="index.php?t=contact">Contact us</a>
+        <a class="about" href="about.php">About us </a>✕
+        <a class="contact" href="contact.php">Contact us</a>
     </div>
 </body>
 
