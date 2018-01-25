@@ -144,8 +144,8 @@ html{
 }
 
 .plus img{
-  height: 50%;
-  width: 50%;
+  height: 35%;
+  width: 35%;
 }
 
 .plus img:hover
@@ -180,7 +180,6 @@ input[type=submit]{
   width: fit-content;
   height: fit-content;
   justify-self: center;
-  align-self: end; 
   background-color: #E64A1900;
   color: #e64a19;
   padding: 0px;

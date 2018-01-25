@@ -1,19 +1,18 @@
 @font-face 
 {
-    font-family: Roboto;
-    src: url(Roboto/Roboto-Regular.woff);
+  font-family: Roboto;
+  src: url(/Genhome/fonts/Roboto/Roboto-Regular.woff);
 }
 @font-face 
 {
-    font-family: Roboto-Medium;
-    src: url(Roboto/Roboto-Medium.woff);
+  font-family: Roboto-Medium;
+  src: url(/Genhome/fonts/Roboto/Roboto-Medium.woff);
 }
 @font-face 
 {
     font-family: Roboto-Light;
-    src: url(Roboto/Roboto-Light.woff);
+    src: url(/Genhome/fonts/Roboto/Roboto-Light.woff);
 }
-
 
 html{
   font-family: Roboto;
