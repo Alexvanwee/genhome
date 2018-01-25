@@ -1,0 +1,243 @@
+@font-face 
+{
+    font-family: Roboto;
+    src: url(Roboto/Roboto-Regular.woff);
+}
+@font-face 
+{
+    font-family: Roboto-Medium;
+    src: url(Roboto/Roboto-Medium.woff);
+}
+@font-face 
+{
+    font-family: Roboto-Light;
+    src: url(Roboto/Roboto-Light.woff);
+}
+
+
+html{
+  font-family: Roboto;
+  background-color: #424242;
+  height: 100%;
+  min-height: 100%;
+}
+
+*{
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: 
+    "a b c"
+    "d d d"
+    "e e e"
+    "f g h";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 15% 12% 70% 3%;
+  margin: auto;
+  min-width: 300px;
+  align-content: center;
+  height: 100%;
+  min-height: 100%;
+  grid-template-rows: ['a'] fit-content(0%);
+}
+
+.logo{
+  display: flex;
+  grid-area: a;
+  min-height: 101px;
+  height:100%;
+  align-content: center !important;
+  align-self: center !important;
+  justify-self: left;
+  float: left;
+  min-width: 101px;
+}
+
+.thelogo{
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+
+.genhome{
+  grid-area: b;
+  font-size: 60px;
+  font-family: Roboto-Light;
+  font-weight: bold;
+  color: #BDBDBD;
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: end; 
+  min-height: 101px; 
+}
+
+.manage{
+  grid-area: d;
+  font-size: 80px;
+  font-family: Roboto-Light;
+  color: #E64A19;
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: end; 
+  min-height: 101px; 
+}
+
+form
+{
+  margin-top: 4%;
+  display: inline-block;
+  align-self: top !important;
+  justify-self: center !important;
+  min-width: 300px;
+  grid-area: e;
+ height: 90%;
+ 
+  display: grid;
+  grid-template-areas: 
+    "a a"
+    "b b"
+    "c d";
+  grid-template-columns: repeat(2,1fr);
+}
+
+.type{
+  grid-area: a;
+}
+
+.name{
+  grid-area: b;
+  clear: both;
+}
+
+.rights{
+  grid-area: f;
+  color: #E64A19;
+  font-size: 13px;  
+  font-family: Roboto-Light;
+  width: fit-content;
+  justify-self: left;
+  align-self: center;
+  height: fit-content;
+}
+
+.info{
+  grid-area: g;
+  justify-self: center;
+  width: fit-content;
+  font-size: 17px;
+  color: #BDBDBD;
+  text-decoration: none;
+  align-self: center;
+  overflow: auto;
+}
+
+.about{
+  color: #E64A19 !important;
+  text-decoration: none !important;
+  text-decoration: none !important;
+
+}
+
+.contact{
+  color: #E64A19 !important;
+  text-decoration: none !important;
+}
+
+.selection {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #E64A19;
+   color: #424242;
+   font-size: inherit;
+   margin: 20px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
+label
+{
+  font-size: 17px;
+  font-family: Roboto-Light;
+  font-weight: bold; 
+  display: block;
+  margin-bottom: 4%;
+  color: #F4511E;
+}
+input
+{
+  width: 100%;
+  height: 30px;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1.1px solid #BDBDBD;
+  color: #E0E0E0;
+  background-color: #424242;
+  font-family: Roboto-Light;
+  margin-bottom: 4%;
+}
+input:focus
+{
+  border: none;
+  border-bottom: 1.5px solid #E64A19;
+  outline: none;
+} 
+input[type=submit], #submit 
+{
+  background-color: #E64A1900;
+  color: #E64A19;
+  padding: 0px;
+  border: 1.5px solid #E64A19;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 96%;
+  font-family: Roboto-Light;
+  margin: auto;
+}
+
+.back
+{
+  grid-area: c;
+  display: inline-flex;
+  align-content: center;
+  height: 64px;
+}
+
+.buttons
+{
+  display: inline-flex;
+  height: 64px;
+  grid-area: d;
+  align-content: center;
+}
+
+.return
+{
+  background-color: #BDBDBD00;
+  color: #BDBDBD;
+  padding: 0px;
+  border: 1.5px solid #BDBDBD;
+  border-radius: 8px !important;
+  cursor: pointer;
+  width: 96%;
+  text-align: center;
+  height: 30px;
+  font-size: 17px;
+  font-family: Roboto-Light;
+  outline: none;
+  margin: auto;
+}
