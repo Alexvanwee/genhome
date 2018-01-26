@@ -17,7 +17,7 @@
   
 
 <body class="grid">
-    
+
     <div class="logo">
         <img src="/Genhome/Images/logo.png" class="thelogo" alt="Logo">
     </div>
@@ -28,24 +28,15 @@
 
 	
     <div class="content">
-  		<div class="buttons">
-            <button class="plus" type="button" formnovalidate="formnovalidate" onclick="location.href='addRooms.php'"><img src="/Genhome/Images/plus.png" alt="add" /></button> 
+        <div class="buttons">
+            <button class="plus" type="button" formnovalidate="formnovalidate" onclick="location.href='addRooms.php'"><img src="/Genhome/Images/plusW.png" alt="add" /></button> 
         </div>
-       <!--  <p id="member">
+        <p id="room">
             <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_show_rooms.php';?>
-          </p> -->
+          </p>
  	</div>
     
     <input type="submit" value="Submit"/>
-
-    <div class="rights">
-        © 2017. All rights reserved.
-    </div>
-  	
-    <div class="info">
-        <a class="about" href="about.php">About us </a>✕
-        <a class="contact" href="contact.php">Contact us</a>
-    </div>
 </body>
 
 

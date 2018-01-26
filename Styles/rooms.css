@@ -21,6 +21,25 @@ html{
   min-height: 100%;
 }
 
+*::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: #25252500;
+}
+
+*::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #25252500;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #e64a19;
+}
+
 * {
   box-sizing: border-box;
   font-smoothing: antialiased;
@@ -78,7 +97,7 @@ html{
 
 .manage{
   grid-area: d;
-  font-size: 80px;
+  font-size: 60px;
   font-family: Roboto-Light;
   color: #E64A19;
   width: fit-content;
@@ -88,14 +107,13 @@ html{
   min-height: 101px; 
 }
 
-
 .content{
   display: inline-block;
   grid-column: e;
   align-self: center !important;
   justify-self: center !important;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 200px;
+  max-width: 100%;
   min-height: 250px;
 }
 
