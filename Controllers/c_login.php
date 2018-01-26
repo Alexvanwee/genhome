@@ -44,9 +44,13 @@ if (isset($_POST["login"]) && $_POST["login"]!="" && isset($_POST['pwd']) && $_P
 			}
 			// set primary home id 
 			$primary_home = get_primary_home($_SESSION['login']);
-			$_SESSION['home_id'] = $primary_home;		
-			// set sensors  
-			$sensors = get_all_sensors($primary_home);
+			$_SESSION['home_id'] = $primary_home;
+			$sensors = "";		
+			if(!$isFirst)
+			{
+				// set sensors  
+				$sensors = get_all_sensors($primary_home);
+			}
 			$_SESSION['sensors'] = $sensors;
 			// set member_id 
 			$_SESSION['member_id'] = $member_id;
