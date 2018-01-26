@@ -4,7 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/create_room.php';
 
 global $roomtype,$roomname;
 $roomtype = $_POST["selection"];
-$roomname = $_POST["roomname"]
+$roomname = $_POST["roomname"];
 
 if(!isset($roomtype) || !isset($roomname))
 {
