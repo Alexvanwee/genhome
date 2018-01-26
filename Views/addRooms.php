@@ -21,7 +21,7 @@
 	<form title="add" id="add" method="post">
 		<div class="type">
 			<label for="RoomType">Room type</label>
-			<select class="selection">
+			<select name="selection" class="selection">
   				<option value="kitchen">Kitchen</option>
   				<option value="bathroom">Bathroom</option>
   				<option value="bedroom">Bedroom</option>
@@ -34,7 +34,7 @@
 		</div>
 		<div class="name">
 			<label for="RoomName">Room name</label>
-			<input id="last_name" type="text" name="last_name" minlength="2" maxlength="30" placeholder="min. 2 characters" required>
+			<input id="room_name" type="text" name="roomname" minlength="2" maxlength="30" placeholder="min. 2 characters" required>
 		</div>
 		<div class="back">
 			<button class="return" type="button" onclick="location.href='rooms.php'" formnovalidate="formnovalidate">Back</button>

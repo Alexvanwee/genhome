@@ -161,9 +161,10 @@ html{
   border: none;
 }
 
+
 .plus img{
-  height: 35%;
-  width: 35%;
+  height: 25%;
+  width: 25%;
 }
 
 .plus img:hover
@@ -172,8 +173,9 @@ html{
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
-  cursor: pointer;
+    cursor: pointer;
 }
+
 
 input
 {

@@ -2,20 +2,17 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
-function createRoom($Rtype,$Rname,$roomID,$homeID)
+function createRoom($roomtype,$roomname)
 {
   try
   {
       $pdo = connect_database();
       if(!$pdo){ return false; }
-      $request ="INSERT INTO room (Room_type,Room_name,Room_ID,Home_ID) VALUES (:hid1,:hid2,:hid3,:hid4)";
+      $request ="INSERT INTO room (Room_type,Room_name) VALUES (:hid1,:hid2)";
       $stmt = $pdo->prepare($request);
       // replace ":xxxx" with the corresponding data (member_id)
-      $stmt->bindParam(":hid1", $Rtype,PDO::PARAM_STR);
-      $stmt->bindParam(":hid2", $Rname,PDO::PARAM_STR);
-      $stmt->bindParam(":hid3", $roomID,PDO::PARAM_STR);
-      $stmt->bindParam(":hid4", $homeID,PDO::PARAM_STR);
-      
+      $stmt->bindParam(":hid1", $roomtype,PDO::PARAM_STR);
+      $stmt->bindParam(":hid2", $roomname,PDO::PARAM_STR);
       $stmt->execute();
 
       // close the connection to the database
@@ -36,8 +33,8 @@ function createRoom($Rtype,$Rname,$roomID,$homeID)
       return false;
     }
 }
-$test=createRoom("Kitchen","Exemple","3","25");
-echo($test);
+// $test=createRoom("Kitchen","Exemple");
+// echo($test);
 
 
 
