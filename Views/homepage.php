@@ -46,7 +46,7 @@
 			<div class="buttons">
 				<button class="register" type="button" formnovalidate="formnovalidate" onclick="location.href='index.php?t=register'">Register</button> 
 				<input type="submit" value="Submit"/>
-				<button class="forgot_password" title="Forgot Password ?" type="button"/>
+				<button class="forgot_password" title="Forgot Password ?" formnovalidate="formnovalidate" onclick="location.href='index.php?t=reset_password'" type="button"/>
 			</div>
 		</form>
 		<div class="rights">
