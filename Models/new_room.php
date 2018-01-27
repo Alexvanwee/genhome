@@ -1,16 +1,13 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/member_id.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_referrer_id.php';
 
-// function to create a new home
-function new_home($email, $address, $home_name)
+// function to create a new room
+function new_room($member_id,$room_type, $room_name, $home_id)
 {
-	// retrieve the member id with his email address
-    $member_id = get_member_id($email);
     $referrer_id = get_referrer_id($member_id);
-    if(!$member_id || !$referrer_id)
+    if(!$referrer_id)
     {
     	return false;
     }
@@ -23,12 +20,12 @@ function new_home($email, $address, $home_name)
 	   	$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL request
-		$request = "INSERT INTO home (Address,Member_ID,Home_name) VALUES (:ad,:mid,:hnm)";
+		$request = "INSERT INTO room (Room_type,Room_name,Home_ID) VALUES (:rty,:rnm,:hid)";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (address and member_id)
-		$stmt->bindParam(":ad", $address,PDO::PARAM_STR);
-		$stmt->bindParam(":mid", $member_id,PDO::PARAM_INT);
-		$stmt->bindParam(":hnm", $home_name,PDO::PARAM_STR);
+		$stmt->bindParam(":rty", $room_type,PDO::PARAM_STR);
+		$stmt->bindParam(":rnm", $room_name,PDO::PARAM_STR);
+		$stmt->bindParam(":hid", $home_id,PDO::PARAM_INT);
 		// execute the SQL command
 		$stmt->execute();
 		// close the connection to the database

@@ -7,8 +7,15 @@ if(valid_password($_POST["N_password"],$_POST["C_password"]))
 	$New_Password=$_POST["N_password"];
 	$New_Password = encrypt_decrypt("encrypt", $New_Password);
 
-    Modify_Password($New_Password);
+    $modify_password = Modify_Password($New_Password);
+    if(!$modify_password)
+	{
+		exit("0");
+	}
+	header('Location: index.php?t=next_step');
 }
+
+
 
 
 // function to verify if 2 passwords entered are the same (boolean return)

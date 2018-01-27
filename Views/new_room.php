@@ -28,8 +28,8 @@
                 <span class="table_title">Your Rooms</span>
                 <table class="rooms_table">
                     <tr id="head_table">
-                        <th id="address_table">Room Type</th>
-                        <th id="name_table">Room Name</th> 
+                        <th id="room_type_table">Room Type</th>
+                        <th id="room_name_table">Room Name</th> 
                         <th id="delete_table"></th>
                     </tr>
                     <!-- CONTROLLER TO DISPLAY THE rooms -->

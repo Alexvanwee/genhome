@@ -16,7 +16,7 @@ $(function()
       {
           home_index = parseInt(home_index);
           
-          $.post("index.php?t=delete",{home_index : home_index, home_name : home_name}, function(result)
+          $.post("index.php?t=delete_home",{home_index : home_index, home_name : home_name}, function(result)
           {
             result = parseInt(result);
             if(result == 0)
