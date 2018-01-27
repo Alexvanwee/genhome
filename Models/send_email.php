@@ -18,11 +18,11 @@ function send_email($name,$LastName,$email,$password)
                 )
             );
 
-	$mail->Timeout = 15;
+	$mail->Timeout = 10;
 	$mail ->SMTPAuth = true;
-	$mail ->SMTPSecure = 'ss1';
+	$mail ->SMTPSecure = 'ssl';
 	$mail ->Host = 'smtp.gmaiL.com';
-	$mail ->Port = 587;
+	$mail ->Port = 465;
 	$mail ->IsHTML(true);
 	$mail ->Username = 'web.genhome@gmail.com';
 	$mail ->Password = 'Teamgenhome';
@@ -43,6 +43,7 @@ function send_email($name,$LastName,$email,$password)
 	}
 }
 
-// send_email("Alex","VW","mecchia.pierre@gmail.com",66);
+// $email = send_email("Alex","VW","mecchia.pierre@gmail.com",668);
+// echo("Email sent : ".$email);
 
 ?>
