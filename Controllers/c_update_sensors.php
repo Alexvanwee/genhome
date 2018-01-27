@@ -64,6 +64,4 @@ saveSensors();
 
 header("Location: /Genhome/Views/sensors.php");
 
-//die($_POST['Light'] . " lights in the " . $_POST['rommName']);
-
 ?>

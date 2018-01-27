@@ -17,9 +17,7 @@
         <div class="manage">
             <h1>Manage the sensors</h1>
 
-            <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_getRooms.php';?>
-
-        </div>
+            <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_getRooms.php';?></div>
 
         <div class="submit"><input type="submit" id="submit" value="Submit"/></div>
 
