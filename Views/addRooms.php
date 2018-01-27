@@ -18,23 +18,23 @@
 
 	<header class="manage">Add rooms</header>
 	
-	<form title="add" id="add" method="post">
+	<form action='/Genhome/Controllers/c_add_room.php' title="add" id="add" method="post">
 		<div class="type">
 			<label for="RoomType">Room type</label>
 			<select name="selection" class="selection">
-  				<option value="kitchen">Kitchen</option>
-  				<option value="bathroom">Bathroom</option>
-  				<option value="bedroom">Bedroom</option>
-  				<option value="dining">Dining Room</option>
-  				<option value="living">Living Room</option>
-  				<option value="laundry">Laundry Room</option>
-  				<option value="office">Office</option>
-  				<option value="other">Other type of room</option>
+  				<option value="Kitchen">Kitchen</option>
+  				<option value="Bathroom">Bathroom</option>
+  				<option value="Bedroom">Bedroom</option>
+  				<option value="Dining">Dining Room</option>
+  				<option value="Living">Living Room</option>
+  				<option value="Laundry">Laundry Room</option>
+  				<option value="Office">Office</option>
+  				<option value="Other">Other type of room</option>
 			</select>
 		</div>
 		<div class="name">
 			<label for="RoomName">Room name</label>
-			<input id="room_name" type="text" name="roomname" minlength="2" maxlength="30" placeholder="min. 2 characters" required>
+			<input id="room_name" type="text" name="roomname" minlength="1" maxlength="10" placeholder="max. 10 characters" required>
 		</div>
 		<div class="back">
 			<button class="return" type="button" onclick="location.href='rooms.php'" formnovalidate="formnovalidate">Back</button>
