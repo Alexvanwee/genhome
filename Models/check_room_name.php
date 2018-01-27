@@ -20,21 +20,20 @@ function check_room_name($room_name,$home_id,$member_id)
 		$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL request
-		$request = "SELECT Room_name FROM room WHERE Room_name = :rnm AND Member_ID = :mid AND Home_ID = :hid";
+		$request = "SELECT Room_name FROM room WHERE Room_name = :rnm AND Home_ID = :hid";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (email address)
 		$stmt->bindParam(":rnm", $room_name,PDO::PARAM_STR);
-		$stmt->bindParam(":mid", $member_id,PDO::PARAM_INT);
 		$stmt->bindParam(":hid", $home_id,PDO::PARAM_INT);
 		// execute the SQL command
 	    $stmt->execute();
 	    // retrieve and store the result into a convenient variable
-	    $home_name = $stmt->fetchColumn();
+	    $room_name = $stmt->fetchColumn();
 	    // close the connection to the database
 	    $pdo=null;
 
 	    // if the convenient variable contains no result (no match in the database)
-	    if($home_name==null || $home_name=="")
+	    if($room_name==null || $room_name=="")
 	    {
 	    	// return true
 			return 1;
@@ -61,7 +60,7 @@ function check_room_name($room_name,$home_id,$member_id)
 	
 }
 
-// $exists = check_home_name("Maison Michel",60);
-// echo($exists);
+// $exists = check_room_name("Kitchen",25,16);
+// print_r($exists);
 
 ?>

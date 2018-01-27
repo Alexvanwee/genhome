@@ -26,7 +26,7 @@
                     <option value="office">Office</option>
                     <option value="other">Other</option>
                 </select>
-                <input type="text" id="room_name" name="room_name" placeholder="Room Name">
+                <input type="text" id="room_name" name="room_name" maxlength="20" placeholder="Room Name">
                 <input type="submit" id="Submit" value="Submit">
             </form>
         </div>

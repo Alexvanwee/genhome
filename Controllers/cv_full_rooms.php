@@ -18,7 +18,7 @@ for ($i=0;$i<sizeof($rooms); $i++)
 { 
 	$str = '<tr rid='.$i.'>
     <td>'.$rooms[$i][0].'</td>
-    <td id="table_home_name">'.$rooms[$i][1].'</td> 
+    <td id="table_room_name">'.$rooms[$i][1].'</td> 
     <td id="delete"><button class="delete_button" title="Delete" type="button"/></td>
 	</tr>';
 	echo($str);

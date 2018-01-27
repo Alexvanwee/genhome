@@ -40,7 +40,7 @@
 	          <ul>
 	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_rooms.php'; ?>
 	            <li>
-	            	<a href="index.php?w=new_room">New Room<span class="add">+</span></a>
+	            	<a href="index.php?w=new_room">Manage Rooms<span class="add">+</span></a>
 	            </li>
 	          </ul>
 	        </li>
@@ -51,7 +51,7 @@
 	          	<?php include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_homes.php'; ?>
 	          	<!-- SET WHERE -->
 	            <li>
-	            	<a href="index.php?w=new_home">New House<span class="add">+</span></a>
+	            	<a href="index.php?w=new_home">Manage Houses<span class="add">+</span></a>
 	            </li>
 	          </ul>
 	        </li>

@@ -8,7 +8,7 @@ function insertUser($name,$LastName,$mail,$password,$status,$m_id)
   {
       $pdo = connect_database();
       if(!$pdo){ return false; }
-      $request ="INSERT INTO members (First_Name,Last_Name,Mail,Login,Password,isAdmin,Referrer_ID) VALUES (:hid1,:hid2,:hid3,:hid4,:hid5,:hid6,:hid7)";
+      $request ="INSERT INTO members (First_Name,Last_Name,Mail,Login,Password,isOwner,Referrer_ID) VALUES (:hid1,:hid2,:hid3,:hid4,:hid5,:hid6,:hid7)";
       $stmt = $pdo->prepare($request);
       // replace ":xxxx" with the corresponding data (member_id)
       $stmt->bindParam(":hid1", $name,PDO::PARAM_STR);
