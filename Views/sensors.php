@@ -1,8 +1,8 @@
 <html>
 
   <head>
-		<link rel="stylesheet" type="text/css" href="/Genhome/Styles/sensors.css"/>
-		<title>Sensors</title>
+        <link rel="stylesheet" type="text/css" href="/Genhome/Styles/sensors.css"/>
+        <title>Sensors</title>
   </head>
 
   <body>
@@ -20,7 +20,6 @@
             <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_getRooms.php';?>
         </div>
 
-        <div class="buttons"><input type="submit" id="submit" value="Submit"/></div>
 
     </div>
 
