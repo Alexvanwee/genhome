@@ -18,8 +18,8 @@
             <h1>Manage the sensors</h1>
 
             <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_getRooms.php';?>
-        </div>
 
+        </div>
 
     </div>
 

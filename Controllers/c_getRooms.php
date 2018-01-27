@@ -28,11 +28,11 @@ while ($donnees= $reponse->fetch()){ ?>
         </div>
 
         <input type="hidden" class="" value="<?php echo $donnees['Room_name']; ?>" name="rommName"/>
-        <div class="buttons"><input type="submit" id="submit" value="Submit"/></div>
+        <div class="buttons"><input type="submit" id="submit" value="Add"/></div>
 
     </form>
 
-    <?php
-  }
+<?php
+}
 $reponse->closeCursor();
 ?>
