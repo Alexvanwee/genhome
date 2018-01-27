@@ -30,7 +30,3 @@ $str = '<ul>
 ?>
 
 <li><h3><?php echo $donnees['Room_name']; ?></h3><img src="/genhome/Images/plusW.png" class= "plus" alt="plus">;
-
-
-
-
