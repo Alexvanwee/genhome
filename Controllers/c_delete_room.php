@@ -1,16 +1,16 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_ownership.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/delete_home.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/delete_room.php';
 
-if( !isset($_POST['home_index']) || !isset($_POST['home_name']) )
+if( !isset($_POST['room_index']) || !isset($_POST['room_name']) )
 {
 	exit("0");
 }
-$home_index = $_POST['home_index'];
-$home_name = $_POST['home_name'];
-$homes = $_SESSION['homes'];
-if( $homes[$home_index][1] != $home_name )
+$room_index = $_POST['room_index'];
+$room_name = $_POST['room_name'];
+$rooms = $_SESSION['rooms'];
+if( $rooms[$room_index][1] != $room_name )
 {
 	header('Location: index.php');
 }
@@ -20,13 +20,12 @@ if( !$isOwner )
 {
 	header('Location: index.php');
 }
-$home_id = $homes[$home_index][2];
-$delete = delete_home($home_id);
+$room_id = $rooms[$room_index][2];
+$delete = delete_room($room_id);
 if( !$delete )
 {
-	echo($home_id);
-	exit();
+	exit("0");
 }
-echo(1);
+echo("1");
 
 ?>

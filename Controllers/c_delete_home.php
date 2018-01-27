@@ -24,8 +24,7 @@ $home_id = $homes[$home_index][2];
 $delete = delete_home($home_id);
 if( !$delete )
 {
-	echo($home_id);
-	exit();
+	exit("0");
 }
 echo(1);
 

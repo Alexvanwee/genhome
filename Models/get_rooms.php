@@ -37,7 +37,7 @@ function get_rooms($member_id,$home_id)
 			array_push($room, $result[$i][0]);
 			array_push($room, $result[$i][1]);
 			array_push($room, $result[$i][2]);
-			array_push($rooms, $home);
+			array_push($rooms, $room);
 		}
 		//return result
 		return $rooms;
@@ -56,8 +56,8 @@ function get_rooms($member_id,$home_id)
 	}
 }
 
-// $homes = get_homes("alexandrevanwesel@gmail.com");
-// print_r($homes);
+// $rooms = get_rooms(16,25);
+// print_r($rooms);
 
 
 ?>

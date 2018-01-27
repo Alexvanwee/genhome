@@ -15,7 +15,18 @@
         <div class="new_room">
             <form id="roomForm" method="post">
                 <span class="room_title">Add a New Room : </span>
-                <input type="text" id="room_type" name="room_type" placeholder="Room Type">
+                <!-- <input type="text" id="room_type" name="room_type" placeholder="Room Type"> -->
+                <label for="RoomType">Room type</label>
+                <select name="room_type" class="selection">
+                    <option value="kitchen">Kitchen</option>
+                    <option value="bathroom">Bathroom</option>
+                    <option value="bedroom">Bedroom</option>
+                    <option value="dining">Dining Room</option>
+                    <option value="living">Living Room</option>
+                    <option value="laundry">Laundry Room</option>
+                    <option value="office">Office</option>
+                    <option value="other">Other type of room</option>
+                </select>
                 <input type="text" id="room_name" name="room_name" placeholder="Room Name">
                 <input type="submit" id="Submit" value="Submit">
             </form>

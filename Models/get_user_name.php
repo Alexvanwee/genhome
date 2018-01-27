@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
-// function to get of a user from email (return array[values])
+// function to get of a user from email (return array[ fname , lname ])
 function get_user_name($email)
 {
 	try 

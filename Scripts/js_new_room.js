@@ -2,10 +2,10 @@ $(function()
 {
   $(".delete_button").click(function(){
       // var home_name = "";
-      var home_name = $(this).parent().parent().find("#table_home_name").text();
-      var home_index = $(this).parent().parent().attr("hid");
-      var str = 'Are you sure you want to delete the home : '+home_name+' ?';
-      str += '\n It will also delete all the rooms and sensors linked to it.';
+      var home_name = $(this).parent().parent().find("#table_room_name").text();
+      var home_index = $(this).parent().parent().attr("rid");
+      var str = 'Are you sure you want to delete the room : '+room_name+' ?';
+      str += '\n It will also delete all the sensors linked to it.';
       // var token = 0;
       var confirmed = 0;
       if (confirm(str)) 
@@ -14,14 +14,14 @@ $(function()
       } 
       if(confirmed == 1)
       {
-          home_index = parseInt(home_index);
+          room_index = parseInt(room_index);
           
-          $.post("index.php?t=delete",{home_index : home_index, home_name : home_name}, function(result)
+          $.post("index.php?t=delete_room",{room_index : room_index, room_name : room_name}, function(result)
           {
             result = parseInt(result);
             if(result == 0)
             {
-              $("#error").text("Couldn't delete the home, please try again later...");
+              $("#error").text("Couldn't delete the room, please try again later...");
             }
           });
       }
@@ -29,7 +29,7 @@ $(function()
 
 function refresh_page(){ location.href = "index.php"; }
 
-	$('#home_name,#address')
+	$('#room_name')
 	    .data("oldValue",'')
 	    .bind('input propertychange', function() 
 	    {
@@ -43,10 +43,10 @@ function refresh_page(){ location.href = "index.php"; }
 	        return $(this).data('oldValue',newValue)
 	    });
 
-	 $("#homeForm").on("submit",function(e) 
+	 $("#roomForm").on("submit",function(e) 
 	 {
       var token = 0;
-	    $.post("index.php?t=new_home",$('#homeForm').serialize(), function(result)
+	    $.post("index.php?t=new_room",$('#roomForm').serialize(), function(result)
           {
           	result = parseInt(result);
           	if(result == 1)
