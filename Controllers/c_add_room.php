@@ -19,6 +19,6 @@ if(isset($_POST['selection'])) echo $_POST['selection'];
 
 createRoom($roomtype, $roomname, $homeId);
 
-header("Location: index.php?t=addRooms");
+header("Location: index.php?t=rooms");
 
 ?>
