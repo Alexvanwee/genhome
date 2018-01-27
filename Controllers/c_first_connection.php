@@ -51,7 +51,7 @@ else if($_SESSION["step"] == 4)
 	}
 	else
 	{
-	 	//include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/addUser.php';
+	 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/addRooms.php';
 	}
 }
 else if($_SESSION["step"] == 5)

@@ -24,7 +24,7 @@
 	
     <div class="content">
         <div class="buttons">
-            <button class="plus" type="button" formnovalidate="formnovalidate" onclick="location.href='addRooms.php'"><img src="/Genhome/Images/plusW.png" alt="add" /></button> 
+            <button class="plus" type="button" formnovalidate="formnovalidate" onclick="location.href='index.php?t=addRooms'"><img src="/Genhome/Images/plusW.png" alt="add" /></button> 
         </div>
         <p class="room">
             <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_show_rooms.php';?>
