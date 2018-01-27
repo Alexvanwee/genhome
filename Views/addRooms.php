@@ -18,7 +18,7 @@
 
 	<header class="manage">Add rooms</header>
 	
-	<form action='/Genhome/Controllers/c_add_room.php' title="add" id="add" method="post">
+	<form action='index.php?t=add_room' title="add" id="add" method="post">
 		<div class="type">
 			<label for="RoomType">Room type</label>
 			<select name="selection" class="selection">
@@ -34,22 +34,15 @@
 		</div>
 		<div class="name">
 			<label for="RoomName">Room name</label>
-			<input id="room_name" type="text" name="roomname" minlength="1" maxlength="10" placeholder="max. 10 characters" required>
+			<input id="room_name" type="text" name="roomname" minlength="1" maxlength="20" placeholder="max. 20 characters" required>
 		</div>
 		<div class="back">
-			<button class="return" type="button" onclick="location.href='rooms.php'" formnovalidate="formnovalidate">Back</button>
+			<button class="return" type="button" onclick="location.href='index.php'" formnovalidate="formnovalidate">Back</button>
 		</div>
 		<div class="buttons">
 			<input type="submit" id="submit" value="Add"/>
 		</div>
 	</form>
-	<div class="rights">
-		© 2017. All rights reserved.
-	</div>
-	<div class="info">
-		<a class="about" href="about.php">About us </a>✕
-		<a class="contact" href="contact.php">Contact us</a>
-	</div>
 </body>
 
 </html>
