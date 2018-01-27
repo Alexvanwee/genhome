@@ -138,9 +138,10 @@ width :30px;
 }
 
 .plus{
+  margin top: 100;
   height:100px;
-  width:100px;
 }
+
 form {
   grid-area: d;
   text-align: center;
@@ -149,7 +150,7 @@ form {
 
 #menu-deroulant, #menu-deroulant ul{
 padding:0;
-margin:15;
+margin-top:50;
 list-style:none;
 text-align:center;
 display:inline;
@@ -181,7 +182,8 @@ transition: .8s all .3s;
 }
 
 #menu-deroulant li:hover ul{
-max-height:20em;
+max-height:25em;
+padding-top :42;
 }
 
 #menu-deroulant li:last-child:hover, #menu-deroulant li:last-child li:hover{
@@ -191,16 +193,17 @@ background:none;
 #menu-deroulant ul a{
 padding:8px 0;
 }
+
 #menu-deroulant li:hover li a{
 color:white;
 text-transform:inherit;
 }
+
 #menu-deroulant li:hover a, #menu-deroulant li li:hover a{
 color: rgb(244, 81, 30);
 }
 
-.add
-{
+.add {
   display: inline;
   height: 64px;
   grid-area: d;
@@ -220,19 +223,6 @@ input[type=submit] {
   width: 100px;
   font-size: 17px;
 }
-
-/*button[type=submit]{
-  background-color: #E64A19;
-  color: white;
-  padding: 0px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 85%;
-  margin-right: 2%;
-  width: 265px;
-  font-size: 17px;
-}*/
 
 *::-webkit-scrollbar-track {
     border-radius: 10px;
@@ -254,6 +244,5 @@ input[type=submit] {
   display: inline-flex;
   height: 64px;
   grid-area: e;
-  /*align-content: center;*/
   align-self: center;
 }
