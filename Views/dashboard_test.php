@@ -107,7 +107,7 @@
 
       	<div >
         	
-        	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_home.php';?>
+        	<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_room.php';?>
       	</div>
 
     <!-- ######## end ########"-->

@@ -3,8 +3,8 @@
 session_start();
 
 global $targets, $paths;
-$targets = array("login","registration","register","dashboard","contact","logout","about","addUser","favourite","message","first_connection","next_step","changePassword","newpassword","new_home","delete_home","testing","new_room","delete_room");
-$paths = array("/Controllers/c_login.php","/Controllers/c_registration.php","/Views/register.php","/Views/dashboard.php","/Views/contact.php","/Controllers/c_logout.php","/Views/about.php","/Controllers/c_add_user.php","/Controllers/c_favourite.php","/Controllers/c_contact_message.php","/Controllers/c_first_connection.php","/Controllers/c_next_step.php","/Views/changePassword.php","/Controllers/c_newpassword.php","/Controllers/c_new_home.php","/Controllers/c_delete_home.php","/Views/modify_home.php","/Controllers/c_new_room.php","/Controllers/c_delete_room.php");
+$targets = array("login","registration","register","dashboard","contact","logout","about","addUser","favourite","message","first_connection","next_step","changePassword","newpassword","new_home","delete_home","modify_home","new_room","delete_room","testing","forgetPassword","reset_password");
+$paths = array("/Controllers/c_login.php","/Controllers/c_registration.php","/Views/register.php","/Views/dashboard.php","/Views/contact.php","/Controllers/c_logout.php","/Views/about.php","/Controllers/c_add_user.php","/Controllers/c_favourite.php","/Controllers/c_contact_message.php","/Controllers/c_first_connection.php","/Controllers/c_next_step.php","/Views/changePassword.php","/Controllers/c_newpassword.php","/Controllers/c_new_home.php","/Controllers/c_delete_home.php","/Views/modify_home.php","/Controllers/c_new_room.php","/Controllers/c_delete_room.php","/Views/dashboard_test.php","/Controllers/c_delete_room.php","/Views/resetpassword.php");
 
 if(!isset($_GET['t']) && !isset($_GET['e']) && !isset($_GET['w']) && !isset($_GET['h']) && !isset($_GET['f']))
 {
