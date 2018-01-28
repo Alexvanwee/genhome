@@ -11,8 +11,8 @@ function saveSensors() {
     $stmt->execute();
 
     $room = $stmt->fetchAll();
-    //$home_id = $_SESSION['home_id'];
-    $homeId = 25;
+
+    $homeId = $_SESSION['home_id'];
 
     $query = "INSERT INTO sensors(Type_of_sensor, Room_ID, Home_ID, isFavourite) VALUES('Light', :roomId, :homeId, false)";
     for ($it = 0; $it < $_POST["Light"]; $it++) {
@@ -63,6 +63,6 @@ function saveSensors() {
 saveSensors();
 
 
-header("Location: /Genhome/Views/sensors.php");
+header("Location: index.php?t=next_step");
 
 ?>

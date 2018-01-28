@@ -62,10 +62,10 @@ else if($_SESSION["step"] == 5)
 	}
 	else
 	{
-	 	//include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/addUser.php';
+	 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/sensors.php';
 	}
 }
-else if($_SESSION["step"] == 6)
+else if($_SESSION["step"] == 6 || $_SESSION["step"] == 0)
 {
 	unset($_SESSION["step"]);
 	modify_step(0,$_SESSION["login"]);

@@ -37,7 +37,7 @@
 			<input id="room_name" type="text" name="roomname" minlength="1" maxlength="20" placeholder="max. 20 characters" required>
 		</div>
 		<div class="back">
-			<button class="return" type="button" onclick="location.href='index.php?t=rooms'" formnovalidate="formnovalidate">Back</button>
+			<button class="return" type="button" onclick="location.href='index.php'" formnovalidate="formnovalidate">Back</button>
 		</div>
 		<div class="buttons">
 			<input type="submit" id="submit" value="Add"/>
