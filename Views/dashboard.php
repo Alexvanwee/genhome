@@ -56,6 +56,10 @@
 	          </ul>
 	        </li>
 
+          <li>
+            <strong><a class="new_sensor" href="index.php?w=new_sensor">Manage Sensors</a></strong>
+          </li>
+
 	        <li>
 	          <strong><a class="settings" href="#">Settings</a></strong>
 	        </li>

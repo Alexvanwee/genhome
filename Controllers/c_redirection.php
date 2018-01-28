@@ -137,6 +137,15 @@ if(isset($_SESSION['where']))
 		}
 		include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_room.php';
 	}
+	else if($where == "new_sensor")
+	{
+		if(!$isOwner)
+		{
+			$_SESSION["where"] = "favourites";
+			header('Location: index.php');
+		}
+		include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/new_sensor.php';
+	}
 	// If goes to a room
 	else
 	{

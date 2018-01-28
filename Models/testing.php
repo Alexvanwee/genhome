@@ -12,7 +12,7 @@
 // echo "Raw Data:<br />";
 // echo("$data");
 
-echo(mt_rand(0,10));
+print_r($_SESSION['sensors']);
 
 ?>
 

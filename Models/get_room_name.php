@@ -3,24 +3,23 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 // function to get of a user from email (return array[values])
-function get_room_name($email)
+function get_room_name($room_id)
 {
 	try 
 	{
 		$pdo = connect_database();
 		if(!$pdo){ return false; }
 		// prepare the SQL statement
-		$request="SELECT Room_name FROM room WHERE Login = :email";
+		$request="SELECT Room_name FROM room WHERE Room_ID = :rid";
 		$stmt = $pdo->prepare($request);
 		// replace ":xxxx" with the corresponding data (member_id)
-		$stmt->bindParam(":email", $email,PDO::PARAM_STR);
+		$stmt->bindParam(":rid", $room_id,PDO::PARAM_INT);
 		//execute
 		$stmt->execute();
 		//fetch
-		$name = $stmt->fetchAll();
+		$name = $stmt->fetchColumn();
 		// close connection
 		$pdo=null;
-		$name = array($name[0][0],$name[0][1]);
 		//return result
 		return $name;
 	}
@@ -37,7 +36,7 @@ function get_room_name($email)
 	}
 }
 
-// $name = get_user_name("alexandrevanwesel@gmail.com");
+// $name = get_room_name(1);
 // print_r($name);
 
 ?>
