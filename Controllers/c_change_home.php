@@ -19,6 +19,7 @@ if(!$home_id)
 else
 {
 	$_SESSION['home_id'] = $home_id;
+	$_SESSION['where'] = "favourites";
 	header('Location: index.php');
 }
 

@@ -123,4 +123,39 @@ $(function()
     });
 });
 
+//##############################################################
+//            To refresh the values of the sensors
+//##############################################################
 
+$(function()
+{
+    $('.card_button').click(function()
+    {
+        var room_name = $(this).closest(".card").find("#room_name").text();
+        var what = $(this).closest(".card").attr("what");
+        var data = $(this).closest(".card").find("#value");
+        
+        if(what == "sensor")
+        {
+          var sensor_name = $(this).closest(".card").find("#sensor_name").text();
+          var sensor_id = $(this).closest(".card").find("#sid").attr("sid");
+        }
+        else
+        {
+          var sensor_name = "";
+          var sensor_id = "";
+        }
+                 
+        $.post("index.php?t=sensor_action",{room_name : room_name, sensor_name : sensor_name, sensor_id : sensor_id, what : what}, function(result)
+          {
+            if(parseInt(result) == 2)
+            {
+
+            }
+            else
+            {
+              data.text(result);
+            }
+          });        
+    });
+});

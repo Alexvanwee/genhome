@@ -14,7 +14,7 @@ $(function()
           	}
           	else if(result == 1)
           	{
-          		$('#fields').replaceWith("<h1>"+msg+"</h1><br/>")
+          		$('#fields').replaceWith("<h1>"+msg+"</h1><br/>");
           	}
           });
           e.preventDefault();        

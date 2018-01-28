@@ -18,10 +18,10 @@ $isOwner = check_ownership($_SESSION["login"]);
 // FOR GENERATION OF SENSORS IN DASHBOARD
 //############################################
 
-global $part1, $part2, $types, $category, $images, $units, $display_card, $alert_card;
+global $part1, $part2, $types, $category, $images, $units, $display_card, $alert_card, $action_card;
 
-$types = array("Temperature","Humidity","Smoke","Door","Window","Camera");
-$category = array("display","display","alert","alert","alert","live");
+$types = array("Temperature","Humidity","Smoke","Door","Window","Camera","Light");
+$category = array("display","display","alert","alert","alert","live","action");
 $images = array("temperature.png","humidity.png","smoke_detector.png","door_closed.png","window_closed.png","camera.png");
 $units = array("°C","%");
 
@@ -57,7 +57,7 @@ $display_card = '<article class="card" what="sensor">
 					        <div class="img_container">
 					        	<img class="card_img" src="/Genhome/Images/dashboard/%image%">
 					        </div>
-					        <span class="data">%value%<span class="units">%units%</span></span>
+					        <span class="data"><span id="value">%value%</span><span class="units">%units%</span></span>
 					    </div>
 					    <div class="card-content">
 					        <h2 id="sensor_name">%name%</h2>
@@ -70,6 +70,21 @@ $alert_card = '<article class="card" what="sensor">
 				        <div class="thumbnail">
 				            <button class="%favourite%" id="favourite"></button>
 				            <button class="card_button" ></button>
+				            <div class="img_container_no_data">
+				                <img class="card_img_no_data" src="/Genhome/Images/dashboard/%image%">
+				            </div>
+				        </div>
+				        <div class="card-content">
+				            <h2 id="sensor_name">%name%</h2>
+				            <p id="room_name">%where%</p>
+				        </div>
+				</article>';
+
+$action_card = '<article class="card" what="sensor">
+					<input type="hidden" id="sid" sid=%sensor_id%/>
+				        <div class="thumbnail">
+				            <button class="%favourite%" id="favourite"></button>
+				            <button class="card_button" id="action"></button>
 				            <div class="img_container_no_data">
 				                <img class="card_img_no_data" src="/Genhome/Images/dashboard/%image%">
 				            </div>
@@ -226,17 +241,18 @@ function create_view($what,$data,$where)
 
 function new_card($what,$name,$where)
 {
-	global $types, $category, $images, $units, $display_card, $alert_card;
+	global $types, $category, $images, $units, $display_card, $alert_card, $action_card;
 
 	if($what == "sensor")
 	{
 		$index = array_search($name,$types);
+
 		$cat = $category[$index];
 		if($cat == "display")
 		{
 			$to_replace = array("%image%","%value%","%units%","%name%","%where%");
 			$output = $display_card;
-			$value = 20.5;
+			$value = random_sensor_value($name);
 			$replace = array($images[$index],$value,$units[$index],$name,$where);
 			$output = str_replace($to_replace, $replace, $output);
 			return $output;
@@ -249,7 +265,7 @@ function new_card($what,$name,$where)
 			$output = str_replace($to_replace, $replace, $output);
 			return $output;
 		}
-		else if($cat == "live")
+		else if($cat == "action")
 		{
 
 		}
@@ -262,7 +278,24 @@ function new_card($what,$name,$where)
 }
 
 
-
+function random_sensor_value($name)
+{
+	if($name == "Temperature")
+	{
+		$num = mt_rand(19,20);
+		$dec = mt_rand(0,9);
+		$value = $num.".".$dec;
+		return $value;
+	}
+	else if($name == "Humidity")
+	{
+		$num = mt_rand(70,90);
+		$dec = mt_rand(0,5);
+		$dec = ($dec == 1 ? 5 : 0);
+		$value = $num.".".$dec;
+		return $value;
+	}
+}
 
 
 ?>
