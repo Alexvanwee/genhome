@@ -50,7 +50,7 @@
 			</div>
 		</form>
 		<div class="rights">
-			© 2017. All rights reserved.
+			© 2018. All rights reserved.
 		</div>
 		<div class="info">
 			<a class="about" href="index.php?t=about">About us </a>✕
