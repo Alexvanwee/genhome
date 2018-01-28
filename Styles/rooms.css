@@ -47,15 +47,14 @@ html{
 }
 
 .grid {
-  display: grid;
+  display: grid !important;
   grid-template-areas: 
-    "a b c"
+    "logo brand c"
     "d d d"
     "e e e"
-    "f f f"
-    "g h i";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 15% 12% 60% 10% 3%;
+    "f f f";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 15% 12% 60% 13%;
   margin: auto;
   min-width: 300px;
   align-content: center;
@@ -66,7 +65,7 @@ html{
 
 .logo{
   display: flex;
-  grid-area: a;
+  grid-area: logo;
   min-height: 101px;
   height:100%;
   align-content: center !important;
@@ -83,7 +82,7 @@ html{
 }
 
 .genhome{
-  grid-area: b;
+  grid-area: brand;
   font-size: 60px;
   font-family: Roboto-Light;
   font-weight: bold;
@@ -96,66 +95,56 @@ html{
 }
 
 .manage{
-  grid-area: d;
-  font-size: 60px;
-  font-family: Roboto-Light;
+  grid-area: d; 
+  border-top: 1.4px solid #E64A19;
+  text-align: center;
   color: #E64A19;
-  width: fit-content;
-  height: fit-content;
-  justify-self: center;
-  align-self: end; 
-  min-height: 101px; 
+  margin-bottom: 30px;
+  height: fit-content !important;
+  font-family: Roboto-Light;
+  padding: 0;
+  text-align: center;
+  height: 100px;
+  font-size: 60px; 
 }
 
-.content{
-  display: inline-block;
+.content{ 
   grid-column: e;
-  align-self: center !important;
-  justify-self: center !important;
-  min-width: 200px;
-  max-width: 100%;
-  min-height: 250px;
+  text-align: center;
 }
 
-.rights{
-  grid-area: g;
-  color: #E64A19;
-  font-size: 13px;  
-  font-family: Roboto-Light;
-  width: fit-content;
-  justify-self: left;
-  align-self: center;
-  height: fit-content;
+form {
+  grid-area: e;
+  text-align: center;
+  display: inline-grid;
+
 }
 
-.info{
-  grid-area: h;
-  justify-self: center;
-  width: fit-content;
-  font-size: 17px;
+#display{
+  padding:0;
+  margin-top:50;
+  list-style:none;
+  text-align:center;
+  display:inline;
+  position:relative;
+}
+
+h3 {
+  font-size: 20px;
   color: #BDBDBD;
-  text-decoration: none;
-  align-self: center;
-  overflow: auto;
 }
 
-.about{
-  color: #E64A19 !important;
-  text-decoration: none !important;
-  text-decoration: none !important;
-
+.room{
+  margin: 20px;
 }
 
-.contact{
-  color: #E64A19 !important;
-  text-decoration: none !important;
-}
 
 .buttons{
   display: inline;
 }
 
 .plus{
+  margin-top: 50px;
   background: transparent;
   outline: none;
   border: none;
@@ -163,8 +152,8 @@ html{
 
 
 .plus img{
-  height: 25%;
-  width: 25%;
+  height: 32%;
+  width: 32%;
 }
 
 .plus img:hover

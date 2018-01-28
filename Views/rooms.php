@@ -19,7 +19,7 @@
     
     <header class="genhome">Genhome</header>
 
-    <header class="manage">Manage your rooms</header>
+    <header class="manage">Add rooms</header>
 
 	
     <div class="content">

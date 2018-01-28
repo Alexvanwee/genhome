@@ -51,10 +51,9 @@ html{
   grid-template-areas: 
     "a b c"
     "d d d"
-    "e e e"
-    "f g h";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 15% 12% 70% 3%;
+    "e e e";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 15% 12% 73%;
   margin: auto;
   min-width: 300px;
   align-content: center;
@@ -96,13 +95,11 @@ html{
 
 .manage{
   grid-area: d;
-  font-size: 80px;
+  font-size: 60px;
+  border-top: 1.4px solid #E64A19;
   font-family: Roboto-Light;
   color: #E64A19;
-  width: fit-content;
-  height: fit-content;
-  justify-self: center;
-  align-self: end; 
+  text-align: center;
   min-height: 101px; 
 }
 
@@ -131,40 +128,6 @@ form
 .name{
   grid-area: b;
   clear: both;
-}
-
-.rights{
-  grid-area: f;
-  color: #E64A19;
-  font-size: 13px;  
-  font-family: Roboto-Light;
-  width: fit-content;
-  justify-self: left;
-  align-self: center;
-  height: fit-content;
-}
-
-.info{
-  grid-area: g;
-  justify-self: center;
-  width: fit-content;
-  font-size: 17px;
-  color: #BDBDBD;
-  text-decoration: none;
-  align-self: center;
-  overflow: auto;
-}
-
-.about{
-  color: #E64A19 !important;
-  text-decoration: none !important;
-  text-decoration: none !important;
-
-}
-
-.contact{
-  color: #E64A19 !important;
-  text-decoration: none !important;
 }
 
 .selection {

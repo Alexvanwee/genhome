@@ -7,12 +7,14 @@ $home_id = 25;
 
 $reponse=getRooms($home_id);
 
-while ($donnees= $reponse->fetch()){
- echo"
-    <div style='display:inline-block;vertical-align:top'>
-      <img src='/Genhome/Images/room.png'><br/>
-      " . $donnees['Room_name'] . "
-    </div>";
-  }
+while ($donnees= $reponse->fetch()){ ?>
+	<form method="post">
+		<div id="display">
+			<img src="/genhome/Images/room.png" class="room" alt="room"><h3><?php echo $donnees['Room_name']; ?></h3>
+  </div>
+</form>
+
+ <?php
+}
 $reponse->closeCursor();
 ?>
