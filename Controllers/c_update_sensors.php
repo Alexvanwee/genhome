@@ -7,7 +7,7 @@ function saveSensors() {
     $pdo = connect_database();
     $query = "SELECT * FROM room WHERE Room_name = :roomname";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":roomname", $_POST['rommName']);
+    $stmt->bindParam(":roomname", $_POST['roomName']);
     $stmt->execute();
 
     $room = $stmt->fetchAll();
@@ -61,6 +61,7 @@ function saveSensors() {
 }
 
 saveSensors();
+
 
 header("Location: /Genhome/Views/sensors.php");
 
