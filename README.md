@@ -3,7 +3,7 @@ APP project (Domotic web app)
 G12 Team C
 
 The database contains 1 admin account :
-Login: web.genhome@gmail.com / Password: passsword
+Login: web.genhome@gmail.com / Password: password
 
 A serial number you can use to register a new user :
 H517833X
