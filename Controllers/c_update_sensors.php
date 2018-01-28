@@ -21,7 +21,6 @@ function saveSensors() {
         $stmt->bindParam(":roomId", $room[0]['Room_ID']);
         $stmt->bindParam(":homeId", $homeId);
         $stmt->execute();
-
     }
 
     $query = "INSERT INTO sensors(Type_of_sensor, Room_ID, Home_ID, isFavourite) VALUES('Humidity', :roomId, :homeId, false)";
@@ -31,7 +30,6 @@ function saveSensors() {
          $stmt->bindParam(":roomId", $room[0]['Room_ID']);
          $stmt->bindParam(":homeId", $homeId);
          $stmt->execute();
-
      }
 
      $query = "INSERT INTO sensors(Type_of_sensor, Room_ID, Home_ID, isFavourite) VALUES('Temperature', :roomId, :homeId, false)";
@@ -41,7 +39,6 @@ function saveSensors() {
          $stmt->bindParam(":roomId", $room[0]['Room_ID']);
          $stmt->bindParam(":homeId", $homeId);
          $stmt->execute();
-
      }
 
      $query = "INSERT INTO sensors(Type_of_sensor, Room_ID, Home_ID, isFavourite) VALUES('Window', :roomId, :homeId, false)";
@@ -51,7 +48,6 @@ function saveSensors() {
           $stmt->bindParam(":roomId", $room[0]['Room_ID']);
          $stmt->bindParam(":homeId", $homeId);
          $stmt->execute();
-
      }
 
      $query = "INSERT INTO sensors(Type_of_sensor, Room_ID, Home_ID, isFavourite) VALUES('Camera', :roomId, :homeId, false)";
@@ -61,15 +57,11 @@ function saveSensors() {
          $stmt->bindParam(":roomId", $room[0]['Room_ID']);
          $stmt->bindParam(":homeId", $homeId);
          $stmt->execute();
-
      }
-
 }
 
 saveSensors();
 
-
 header("Location: /Genhome/Views/sensors.php");
 
-//die($_POST['Light'] . " lights in the " . $_POST['rommName']);
-
+?>
