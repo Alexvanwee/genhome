@@ -22,18 +22,18 @@ $email = $_SESSION['login'];
           <h2>Do you want to change your Password?</h2>
   	  </section>
       <section class="login">
-        <form id="form2"  method="post" action="">
+        <form id="form2"  method="post" action="index.php?t=newpassword">
   	      <div class="login1">
           <div class="a">
   		        <label for="text1">Email</label> &ensp; <label class="text1"><?php echo($email)?></label>
           </div>
           <div class="b">
               <p></p>
-  		        <label for="text2">New Password</label> &ensp; <input class="text2" type="text" minlength="6" maxlength="30" name="N_password" required>
+  		        <label for="text2">New Password</label> &ensp; <input class="text2" type="password" minlength="6" maxlength="30" name="N_password" required>
   		    </div>
           <div class="c">
               <p></p>
-              <label for="text3">Confirm Password</label> &ensp; <input class="text3" type="text" minlength="6" maxlength="30" name="C_password" required>
+              <label for="text3">Confirm Password</label> &ensp; <input class="text3" type="password" minlength="6" maxlength="30" name="C_password" required>
           </div>
           <div class="d">
               <p></p>
@@ -42,7 +42,7 @@ $email = $_SESSION['login'];
                   <p></p>
 
 
-                  <button id="butt"name="submit" type="submit" >Submit</button>
+                  <button id="butt" name="submit" type="submit" >Submit</button>
 
               </div>
   	       </div>

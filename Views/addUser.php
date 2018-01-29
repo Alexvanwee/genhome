@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/Genhome/Styles/user_style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/Genhome/Scripts/js_adduser.js"></script>
-	<?php 
+	<?php
 		include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_user_name.php';
 		$user_name = get_user_name($_SESSION["login"]);
 		$user_name = $user_name[0];
@@ -31,14 +31,16 @@
 		   <div class="admin">
     			<a><img class="admin_logo" src="/Genhome/Images/admin.png" alt"admin_logo"><br /><span><?php echo($user_name) ?></span></a>
     			<a class="add" id="buttonadd" href="#"><img id="buttonadd" class="plus" src="/Genhome/Images/add.png" alt="add"><br /><span>New user</span></a><br />
-    		
+
     			<p id="member">
 			<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_show_users.php';?>
           </p>
 		   </div>
 		</section>
 		<section class="next_page">
-			<button class="next" type="button" formnovalidate="formnovalidate" onclick="location.href='index.php?t=next_step'">Next/Skip</button>
+			<form id="next" action="index.php?t=next_step">
+			<button class="next" type="submit">Next/Skip</button>
+		</form>
 		</section>
 	</main>
 	<div id="modal">
@@ -53,7 +55,9 @@
 				<p class="checkbox">
 				<input  class="checkbox_user" type="radio" name="status" value="Admin" > Owner
 				<input class="checkbox_user" type="radio" name="status" value="User" checked> User</p>
+				<input id="close" type="submit"  class="validate" value="Return">
 				<input id="submit" type="submit"  class="validate" value="Add">
+
 			</form>
 	</div>
 </body>

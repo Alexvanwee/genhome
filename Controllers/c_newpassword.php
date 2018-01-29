@@ -1,16 +1,16 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/encrypt_decrypt.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/NewPassword.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/modify_password.php';
 
 if(valid_password($_POST["N_password"],$_POST["C_password"]))
 {
 	$New_Password=$_POST["N_password"];
 	$New_Password = encrypt_decrypt("encrypt", $New_Password);
 
-    $modify_password = Modify_Password($New_Password);
+    $modify_password = Modify_Password($New_Password,$_SESSION['login']);
     if(!$modify_password)
 	{
-		exit("0");
+		header('Location: index.php');
 	}
 	header('Location: index.php?t=next_step');
 }

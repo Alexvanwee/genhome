@@ -2,10 +2,9 @@ $(function()
 {
     $('#form1').submit(function(e)
     {
-        var token = 0;                 
+        var token = 0;
         $.post("index.php?t=addUser",$('#form1').serialize(), function(result)
           {
-            console.log(result);
             if(result.indexOf("/")<0)
             {
                 // result = result.split("/");
@@ -28,8 +27,8 @@ $(function()
               token = 1;
             }
           });
-          // e.preventDefault(); 
-          if(token == 1){ location.href = "index.php?t=test"; }       
+          // e.preventDefault();
+          if(token == 1){ location.href = "index.php"; }
     });
 });
 
@@ -40,15 +39,21 @@ $(function(){
     });
 });
 
+$(function(){
+  $('#close').click(function(e){
+      e.preventDefault();
+      closeModal();
+    });
+});
 
 $(function()
 {
 	$('#name,#lastname')
 	    .data("oldValue",'')
-	    .bind('input propertychange', function() 
+	    .bind('input propertychange', function()
 	    {
 	        var newValue = $(this).val();
-	        
+
 	        if (!isValid(newValue))
 	        {
 	            $(this).shake(3,4,400);
@@ -56,13 +61,13 @@ $(function()
 	        }
 	        return $(this).data('oldValue',newValue)
 	    });
-	    
+
 	$('#email')
 	    .data("oldValue",'')
-	    .bind('input propertychange', function() 
+	    .bind('input propertychange', function()
 	    {
 	        var newValue = $(this).val();
-	        
+
 	        if (!isValid2(newValue))
 	        {
 	            $(this).shake(3,4,400);
@@ -88,12 +93,12 @@ function isValid2(str)
     return !/[~`'!#$%\^&*+=\\µ£¤²°()[\]\\;,/{}|\\":<>\?]/g.test(str);
 }
 
-jQuery.fn.shake = function(intShakes, intDistance, intDuration) 
+jQuery.fn.shake = function(intShakes, intDistance, intDuration)
 {
-    this.each(function() 
+    this.each(function()
     {
         $(this).css("position","relative");
-        for (var x=1; x<=intShakes; x++) 
+        for (var x=1; x<=intShakes; x++)
         {
             $(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
             .animate({left:intDistance}, ((intDuration/intShakes)/2))

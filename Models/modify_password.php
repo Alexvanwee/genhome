@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/connect_database.php';
 
 // function to create a new user
-function modify_password($New_Password,$Mail_Password)
+function Modify_Password($New_Password,$Mail_Password)
 {
 	try
 	{

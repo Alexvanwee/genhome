@@ -107,7 +107,7 @@ input:focus
     outline: none;
 }
 
-input[type=submit]
+#submit
 {
 	background-color: #E64A1900;
   color: #E64A19;
@@ -119,9 +119,24 @@ input[type=submit]
 	height: 30px;
   font-family: Roboto-Light;
   margin: auto;
-	width: 265px;
+	width: 12%;
   font-size: 17px;
 }
+#close{
+	background-color: #BDBDBD00 !important;
+	color: #BDBDBD !important;
+	border: 1.5px solid #BDBDBD !important;
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 0px;
+
+	height: 30px;
+  font-family: Roboto-Light;
+  margin: auto;
+	width: 12%;
+  font-size: 17px;
+}
+
 button[type=submit]
 {
   background-color: #E64A19;
@@ -158,6 +173,7 @@ button[type=submit]
 
 .next_page{
 	grid-area: next_page;
+	margin-top: 13px;
 }
 button.next{
 	background-color: #E64A1900;
