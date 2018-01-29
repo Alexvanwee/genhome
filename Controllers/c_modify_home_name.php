@@ -7,21 +7,22 @@ if(!isset($_POST["home_name"]))
 {
 	exit("0");
 }
-$email = $_SESSION["email"];
+$email = $_SESSION["login"];
 $isOwner = check_ownership($email);
 if(!$isOwner)
 {
-	header('Location: index.php');
+	echo("probleeeeeeme");
+	// header('Location: index.php?t=logout');
 }
 $home_name = $_POST["home_name"];
-modify_home_name($home_name,$email);
+$modify_home_name = modify_home_name($home_name,$email);
 if(!$modify_home_name)
 {
-	exit("0");
+	exit("probleme");
 }
 else
 {
-	header("Location: index.php?t=next_step");
+	echo("1");
 }
 
 ?>

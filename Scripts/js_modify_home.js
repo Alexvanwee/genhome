@@ -16,15 +16,25 @@ $(function()
 
 	 $("#idForm").on("submit",function(e) 
 	{
-	    $.post("index.php?t=message",$('#idForm').serialize(), function(result)
+    e.preventDefault();
+      var this_element = $(this);
+	    $.post("index.php?t=modify_home_name",$('#idForm').serialize(), function(result)
           {
           	result = parseInt(result);
           	if(result == 0)
           	{
           		$("#error").text("An error occured, please try again later...");
           	}
+            else if(result==1)
+            {
+                this_element.trigger('click');
+                var button = this_element.find(".next");
+                button.css("display","block");                
+            }
           });
+      e.preventDefault();
 	});
+
 });
 
 function isValid(str)

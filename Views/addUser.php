@@ -38,9 +38,7 @@
 		   </div>
 		</section>
 		<section class="next_page">
-			<form id="next" action="index.php?t=next_step">
-			<button class="next" type="submit">Next/Skip</button>
-		</form>
+			<button class="next" type="button" formnovalidate="formnovalidate" onclick="location.href='index.php?t=next_step'">Next/Skip</button>
 		</section>
 	</main>
 	<div id="modal">

@@ -31,7 +31,7 @@
         </p>
  	</div>
     
-    <input type="submit" onclick="location.href='/Genhome/Views/sensors.php'" value="Submit"/>
+    <input type="submit" onclick="location.href='index.php?t=next_step'" value="Submit"/>
 </body>
 
 

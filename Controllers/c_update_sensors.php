@@ -63,6 +63,6 @@ function saveSensors() {
 saveSensors();
 
 
-header("Location: index.php?t=next_step");
+header("Location: index.php");
 
 ?>

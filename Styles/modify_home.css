@@ -217,6 +217,29 @@ input[type=submit]
   	font-family: Roboto-Light;
   	outline: none;
 } 
+#next
+{
+	display: flex;
+	justify-content: center;
+}
+.next
+{
+	display: none;
+	margin-top: 15px;
+	background-color: #BDBDBD00;
+  	color: #e64a19;
+  	height: 35px;
+	width: 150px;
+  	padding: 0px;
+  	border: 1.5px solid #e64a19;
+  	border-radius: 8px !important;
+  	cursor: pointer;
+  	margin-right: 2%;
+  	text-align: center;
+  	font-size: 17px;
+  	font-family: Roboto-Light;
+  	outline: none;
+} 
 .buttons
 {
 	display: flex;

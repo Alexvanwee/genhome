@@ -19,7 +19,8 @@
 
             <?php include_once  $_SERVER['DOCUMENT_ROOT'].'/Genhome/Controllers/c_getRooms.php';?></div>
 
-        <div class="submit"><input type="submit" id="submit" value="Submit"/></div>
+        <div class="submit"><input type="submit" id="submit" onclick="location.href='index.php?t=next_step'" value="Submit"/></div>
+
 
     </div>
 

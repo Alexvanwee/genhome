@@ -4,6 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/fetch_step.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/modify_step.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/modify_first_connection.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/check_ownership.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/get_all_sensors.php';
 
 // retrieve STEP from database
 $_SESSION["step"] = fetch_step($_SESSION["login"]);
@@ -51,7 +52,7 @@ else if($_SESSION["step"] == 4)
 	}
 	else
 	{
-	 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/addRooms.php';
+	 	include_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Views/rooms.php';
 	}
 }
 else if($_SESSION["step"] == 5)
@@ -71,6 +72,7 @@ else if($_SESSION["step"] == 6 || $_SESSION["step"] == 0)
 	modify_step(0,$_SESSION["login"]);
 	modify_first_connection(0,$_SESSION["login"]);
 	$_SESSION["where"] = "favourites";
+	$_SESSION['sensors'] = get_all_sensors($_SESSION['home_id']);
 	header('Location: index.php');
 }
 

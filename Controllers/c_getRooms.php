@@ -1,13 +1,12 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/getRooms.php';
 
-//$home_id = $_SESSION['home_id'];
-$home_id = 25;
+$home_id = $_SESSION['home_id'];
 
 $reponse=getRooms($home_id);
 
 while ($donnees= $reponse->fetch()){ ?>
-    <form method="post" action="/Genhome/Controllers/c_update_sensors.php">
+    <form method="post" action="index.php?t=update_sensors">
          <div id="menu-deroulant">
 
             <li><h3><?php echo $donnees['Room_name']; ?></h3><img src="/genhome/Images/plusW.png" class= "plus" alt="plus">

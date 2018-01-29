@@ -4,7 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/fetch_step.php';
 
 
 // function modify a user's step
-function modify_password($step,$email)
+function modify_step($step,$email)
 {
 	try
 	{
