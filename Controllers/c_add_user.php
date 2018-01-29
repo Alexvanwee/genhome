@@ -25,7 +25,7 @@ elseif(!valid_email($email))
     exit();
 }
 $status = ($status == "User" ? 0 : 1);
-$member_id = 16;
+$member_id = $_SESSION['member_id'];
 $user_password = random_password();
 $crypted_password = encrypt_decrypt("encrypt",$user_password);
 $new_user = insertUser($name,$lastname,$email,$crypted_password,$status,$member_id);

@@ -2,8 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/Genhome/Models/getUsers.php';
 
 
-//$home_id = $_SESSION['home_id'];
-$home_id = 25;
+$home_id = $_SESSION['home_id'];
 
 $reponse=getUsers($home_id);
 
